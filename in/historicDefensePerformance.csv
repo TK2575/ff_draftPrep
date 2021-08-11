@@ -1,0 +1,1785 @@
+Year,Week,Team,Yards Allowed
+2017,1,Atlanta Atl,301
+2017,1,Kansas City KC,371
+2017,1,Baltimore Bal,221
+2017,1,Arizona Ari,367
+2017,1,Buffalo Buf,214
+2017,1,Pittsburgh Pit,237
+2017,1,Philadelphia Phi,264
+2017,1,New England NE,537
+2017,1,Jacksonville Jax,203
+2017,1,Carolina Car,217
+2017,1,Houston Hou,280
+2017,1,Denver Den,249
+2017,1,Seattle Sea,370
+2017,1,Minnesota Min,344
+2017,1,Los Angeles LAR,225
+2017,1,Detroit Det,308
+2017,1,Washington Was,356
+2017,1,Dallas Dal,233
+2017,1,Green Bay GB,225
+2017,1,Los Angeles LAC,321
+2017,1,Cincinnati Cin,268
+2017,1,San Francisco SF,287
+2017,1,Cleveland Cle,290
+2017,1,Chicago Chi,372
+2017,1,Indianapolis Ind,373
+2017,1,Tennessee Ten,359
+2017,1,Oakland Oak,350
+2017,1,New York NYG,392
+2017,1,New York NYJ,408
+2017,1,New Orleans NO,470
+2017,2,Oakland Oak,271
+2017,2,Arizona Ari,266
+2017,2,Baltimore Bal,386
+2017,2,Tampa Bay TB,310
+2017,2,New England NE,429
+2017,2,Pittsburgh Pit,237
+2017,2,Jacksonville Jax,390
+2017,2,Carolina Car,176
+2017,2,Denver Den,268
+2017,2,Houston Hou,295
+2017,2,Minnesota Min,335
+2017,2,Seattle Sea,248
+2017,2,Philadelphia Phi,344
+2017,2,Los Angeles LAR,385
+2017,2,Detroit Det,270
+2017,2,Atlanta Atl,367
+2017,2,Buffalo Buf,255
+2017,2,Tennessee Ten,310
+2017,2,Cincinnati Cin,266
+2017,2,Kansas City KC,406
+2017,2,New York NYG,257
+2017,2,Indianapolis Ind,389
+2017,2,Washington Was,332
+2017,2,Cleveland Cle,337
+2017,2,San Francisco SF,312
+2017,2,Chicago Chi,311
+2017,2,Los Angeles LAC,336
+2017,2,Dallas Dal,380
+2017,2,Green Bay GB,364
+2017,2,Miami Mia,367
+2017,2,New York NYJ,410
+2017,2,New Orleans NO,555
+2017,3,Miami Mia,336
+2017,3,Pittsburgh Pit,306
+2017,3,Baltimore Bal,410
+2017,3,Tennessee Ten,433
+2017,3,Arizona Ari,273
+2017,3,Jacksonville Jax,186
+2017,3,Green Bay GB,301
+2017,3,New England NE,417
+2017,3,Cleveland Cle,335
+2017,3,Denver Den,272
+2017,3,Philadelphia Phi,415
+2017,3,Oakland Oak,472
+2017,3,Indianapolis Ind,346
+2017,3,Houston Hou,396
+2017,3,Seattle Sea,420
+2017,3,Los Angeles LAR,421
+2017,3,Washington Was,128
+2017,3,New Orleans NO,288
+2017,3,Cincinnati Cin,344
+2017,3,New York NYJ,225
+2017,3,Chicago Chi,282
+2017,3,Kansas City KC,330
+2017,3,Detroit Det,428
+2017,3,Minnesota Min,342
+2017,3,Buffalo Buf,366
+2017,3,Dallas Dal,332
+2017,3,New York NYG,354
+2017,3,Los Angeles LAC,311
+2017,3,Atlanta Atl,324
+2017,3,Carolina Car,362
+2017,3,San Francisco SF,418
+2017,3,Tampa Bay TB,494
+2017,4,Kansas City KC,331
+2017,4,Jacksonville Jax,471
+2017,4,Baltimore Bal,381
+2017,4,Pittsburgh Pit,288
+2017,4,Cincinnati Cin,215
+2017,4,Arizona Ari,305
+2017,4,Cleveland Cle,350
+2017,4,Green Bay GB,308
+2017,4,Denver Den,254
+2017,4,Los Angeles LAR,440
+2017,4,Oakland Oak,298
+2017,4,Philadelphia Phi,400
+2017,4,Seattle Sea,237
+2017,4,Houston Hou,195
+2017,4,New Orleans NO,186
+2017,4,Buffalo Buf,389
+2017,4,Detroit Det,284
+2017,4,Minnesota Min,251
+2017,4,San Francisco SF,368
+2017,4,Atlanta Atl,281
+2017,4,Indianapolis Ind,477
+2017,4,New York NYJ,311
+2017,4,Miami Mia,347
+2017,4,Carolina Car,373
+2017,4,New England NE,444
+2017,4,Chicago Chi,260
+2017,4,Washington Was,429
+2017,4,Tampa Bay TB,379
+2017,4,New York NYG,434
+2017,4,Los Angeles LAC,454
+2017,4,Tennessee Ten,445
+2017,4,Dallas Dal,412
+2017,5,Kansas City KC,392
+2017,5,Philadelphia Phi,307
+2017,5,Minnesota Min,274
+2017,5,Jacksonville Jax,371
+2017,5,Buffalo Buf,388
+2017,5,Pittsburgh Pit,313
+2017,5,Cleveland Cle,212
+2017,5,Seattle Sea,375
+2017,5,New York NYJ,419
+2017,5,Green Bay GB,408
+2017,5,Indianapolis Ind,402
+2017,5,Oakland Oak,365
+2017,5,Houston Hou,450
+2017,5,Los Angeles LAR,241
+2017,5,Miami Mia,188
+2017,5,Baltimore Bal,245
+2017,5,Cincinnati Cin,221
+2017,5,Tennessee Ten,178
+2017,5,Carolina Car,242
+2017,5,Los Angeles LAC,335
+2017,5,Chicago Chi,300
+2017,5,Dallas Dal,342
+2017,5,Tampa Bay TB,402
+2017,5,New York NYG,382
+2017,5,Detroit Det,362
+2017,5,San Francisco SF,447
+2017,5,New England NE,409
+2017,5,Arizona Ari,419
+2017,6,Kansas City KC,439
+2017,6,Denver Den,266
+2017,6,Washington Was,335
+2017,6,Baltimore Bal,342
+2017,6,Tampa Bay TB,432
+2017,6,Los Angeles LAR,389
+2017,6,New England NE,408
+2017,6,Miami Mia,339
+2017,6,Jacksonville Jax,249
+2017,6,Oakland Oak,343
+2017,6,New Orleans NO,347
+2017,6,Tennessee Ten,297
+2017,6,Los Angeles LAC,274
+2017,6,Houston Hou,247
+2017,6,Atlanta Atl,289
+2017,6,Chicago Chi,291
+2017,6,New York NYG,412
+2017,6,Detroit Det,379
+2017,6,Minnesota Min,227
+2017,6,Pittsburgh Pit,251
+2017,6,Cleveland Cle,340
+2017,6,Philadelphia Phi,305
+2017,6,Green Bay GB,351
+2017,6,New York NYJ,375
+2017,6,Carolina Car,310
+2017,6,Arizona Ari,414
+2017,6,Indianapolis Ind,473
+2017,6,San Francisco SF,419
+2017,7,Pittsburgh Pit,179
+2017,7,Kansas City KC,505
+2017,7,Oakland Oak,425
+2017,7,Minnesota Min,208
+2017,7,Denver Den,242
+2017,7,Carolina Car,153
+2017,7,Baltimore Bal,357
+2017,7,Miami Mia,272
+2017,7,Los Angeles LAR,196
+2017,7,Jacksonville Jax,232
+2017,7,Philadelphia Phi,344
+2017,7,Seattle Sea,177
+2017,7,New Orleans NO,260
+2017,7,Tennessee Ten,284
+2017,7,Buffalo Buf,447
+2017,7,Chicago Chi,293
+2017,7,Los Angeles LAC,251
+2017,7,Dallas Dal,290
+2017,7,Cleveland Cle,269
+2017,7,New England NE,343
+2017,7,New York NYJ,357
+2017,7,Washington Was,371
+2017,7,Green Bay GB,485
+2017,7,New York NYG,425
+2017,7,Indianapolis Ind,518
+2017,7,Atlanta Atl,403
+2017,7,Arizona Ari,425
+2017,7,Tampa Bay TB,434
+2017,7,Cincinnati Cin,420
+2017,7,San Francisco SF,501
+2017,8,Kansas City KC,364
+2017,8,Pittsburgh Pit,482
+2017,8,Seattle Sea,509
+2017,8,Minnesota Min,276
+2017,8,Oakland Oak,331
+2017,8,Carolina Car,279
+2017,8,Denver Den,276
+2017,8,Miami Mia,295
+2017,8,Baltimore Bal,196
+2017,8,Cincinnati Cin,331
+2017,8,Cleveland Cle,375
+2017,8,Houston Hou,479
+2017,8,New Orleans NO,307
+2017,8,Detroit Det,392
+2017,8,Philadelphia Phi,238
+2017,8,Dallas Dal,285
+2017,8,Buffalo Buf,367
+2017,8,Indianapolis Ind,276
+2017,8,Atlanta Atl,279
+2017,8,New England NE,349
+2017,8,Chicago Chi,387
+2017,8,Tampa Bay TB,254
+2017,8,New York NYJ,386
+2017,8,San Francisco SF,304
+2017,8,Washington Was,307
+2017,8,Los Angeles LAC,414
+2017,9,Buffalo Buf,331
+2017,9,Los Angeles LAR,319
+2017,9,Atlanta Atl,330
+2017,9,Seattle Sea,244
+2017,9,Carolina Car,355
+2017,9,Oakland Oak,395
+2017,9,Arizona Ari,329
+2017,9,Denver Den,419
+2017,9,Jacksonville Jax,148
+2017,9,Houston Hou,371
+2017,9,Baltimore Bal,257
+2017,9,Philadelphia Phi,226
+2017,9,Tennessee Ten,341
+2017,9,Detroit Det,311
+2017,9,New Orleans NO,200
+2017,9,New York NYJ,307
+2017,9,Indianapolis Ind,288
+2017,9,Washington Was,437
+2017,9,Dallas Dal,323
+2017,9,Miami Mia,379
+2017,9,San Francisco SF,368
+2017,9,Tampa Bay TB,407
+2017,9,Kansas City KC,375
+2017,9,Cincinnati Cin,408
+2017,9,Green Bay GB,417
+2017,9,New York NYG,473
+2017,10,Pittsburgh Pit,267
+2017,10,Tennessee Ten,308
+2017,10,Minnesota Min,394
+2017,10,Houston Hou,443
+2017,10,Carolina Car,313
+2017,10,Seattle Sea,290
+2017,10,Green Bay GB,323
+2017,10,New York NYG,474
+2017,10,Jacksonville Jax,322
+2017,10,New England NE,339
+2017,10,Denver Den,396
+2017,10,Chicago Chi,342
+2017,10,New Orleans NO,198
+2017,10,Detroit Det,413
+2017,10,Los Angeles LAR,283
+2017,10,Atlanta Atl,233
+2017,10,Tampa Bay TB,275
+2017,10,Los Angeles LAC,398
+2017,10,Arizona Ari,287
+2017,10,New York NYJ,271
+2017,10,Indianapolis Ind,316
+2017,10,Cleveland Cle,345
+2017,10,San Francisco SF,374
+2017,10,Cincinnati Cin,416
+2017,10,Dallas Dal,336
+2017,10,Washington Was,406
+2017,10,Buffalo Buf,482
+2017,10,Miami Mia,548
+2017,11,Baltimore Bal,265
+2017,11,Detroit Det,398
+2017,11,Pittsburgh Pit,316
+2017,11,Minnesota Min,254
+2017,11,Cincinnati Cin,341
+2017,11,Tampa Bay TB,448
+2017,11,Arizona Ari,357
+2017,11,Philadelphia Phi,225
+2017,11,Houston Hou,292
+2017,11,Green Bay GB,219
+2017,11,Buffalo Buf,429
+2017,11,Seattle Sea,279
+2017,11,Jacksonville Jax,184
+2017,11,Miami Mia,321
+2017,11,Los Angeles LAC,393
+2017,11,Kansas City KC,317
+2017,11,Denver Den,190
+2017,11,New England NE,344
+2017,11,New Orleans NO,456
+2017,11,Los Angeles LAR,451
+2017,11,Atlanta Atl,360
+2017,11,New York NYG,363
+2017,11,Cleveland Cle,284
+2017,11,Chicago Chi,352
+2017,11,Dallas Dal,383
+2017,11,Tennessee Ten,349
+2017,11,Washington Was,535
+2017,11,Oakland Oak,420
+2017,12,Pittsburgh Pit,307
+2017,12,Minnesota Min,289
+2017,12,New Orleans NO,415
+2017,12,Baltimore Bal,303
+2017,12,Detroit Det,408
+2017,12,Cincinnati Cin,405
+2017,12,Philadelphia Phi,140
+2017,12,Oakland Oak,219
+2017,12,Tennessee Ten,254
+2017,12,Buffalo Buf,236
+2017,12,Green Bay GB,462
+2017,12,Houston Hou,294
+2017,12,Jacksonville Jax,344
+2017,12,Seattle Sea,280
+2017,12,Kansas City KC,268
+2017,12,Los Angeles LAC,247
+2017,12,Carolina Car,391
+2017,12,Los Angeles LAR,346
+2017,12,New England NE,221
+2017,12,Denver Den,348
+2017,12,Miami Mia,417
+2017,12,New York NYG,323
+2017,12,Washington Was,170
+2017,12,Arizona Ari,219
+2017,12,Indianapolis Ind,276
+2017,12,New York NYJ,299
+2017,12,Chicago Chi,420
+2017,12,Atlanta Atl,373
+2017,12,San Francisco SF,318
+2017,12,Cleveland Cle,361
+2017,12,Tampa Bay TB,516
+2017,12,Dallas Dal,515
+2017,13,Pittsburgh Pit,353
+2017,13,Minnesota Min,275
+2017,13,Houston Hou,344
+2017,13,Cincinnati Cin,374
+2017,13,Los Angeles LAR,312
+2017,13,Philadelphia Phi,310
+2017,13,Jacksonville Jax,290
+2017,13,Tennessee Ten,384
+2017,13,Buffalo Buf,435
+2017,13,New Orleans NO,279
+2017,13,Los Angeles LAC,291
+2017,13,Kansas City KC,488
+2017,13,Miami Mia,270
+2017,13,Chicago Chi,388
+2017,13,Baltimore Bal,372
+2017,13,Denver Den,367
+2017,13,New England NE,268
+2017,13,Seattle Sea,425
+2017,13,Oakland Oak,265
+2017,13,Dallas Dal,280
+2017,13,Green Bay GB,395
+2017,13,Tampa Bay TB,276
+2017,13,San Francisco SF,147
+2017,13,Atlanta Atl,312
+2017,13,Arizona Ari,303
+2017,13,New York NYG,401
+2017,13,Carolina Car,400
+2017,13,Washington Was,275
+2017,13,Cleveland Cle,429
+2017,13,New York NYJ,474
+2017,13,Indianapolis Ind,426
+2017,13,Detroit Det,370
+2018,1,Pittsburgh Pit,327
+2018,1,Los Angeles LAC,362
+2018,1,Minnesota Min,327
+2018,1,Philadelphia Phi,299
+2018,1,Carolina Car,232
+2018,1,New Orleans NO,529
+2018,1,Baltimore Bal,153
+2018,1,Los Angeles LAR,395
+2018,1,Houston Hou,389
+2018,1,Tennessee Ten,342
+2018,1,Denver Den,306
+2018,1,Jacksonville Jax,324
+2018,1,Detroit Det,349
+2018,1,New England NE,325
+2018,1,New York NYJ,339
+2018,1,Chicago Chi,370
+2018,1,Miami Mia,336
+2018,1,Cleveland Cle,472
+2018,1,Washington Was,213
+2018,1,Cincinnati Cin,380
+2018,1,Atlanta Atl,232
+2018,1,Green Bay GB,294
+2018,1,Dallas Dal,293
+2018,1,San Francisco SF,343
+2018,1,Indianapolis Ind,330
+2018,1,Kansas City KC,541
+2018,1,New York NYG,305
+2018,1,Tampa Bay TB,475
+2018,1,Seattle Sea,470
+2018,1,Arizona Ari,429
+2018,1,Oakland Oak,365
+2018,1,Buffalo Buf,369
+2018,2,New Orleans NO,327
+2018,2,Minnesota Min,351
+2018,2,Los Angeles LAC,293
+2018,2,New England NE,480
+2018,2,Carolina Car,442
+2018,2,Los Angeles LAR,137
+2018,2,Baltimore Bal,373
+2018,2,Philadelphia Phi,436
+2018,2,Houston Hou,283
+2018,2,Jacksonville Jax,302
+2018,2,Denver Den,373
+2018,2,Chicago Chi,276
+2018,2,Washington Was,281
+2018,2,Tennessee Ten,437
+2018,2,Dallas Dal,255
+2018,2,Miami Mia,362
+2018,2,New York NYJ,257
+2018,2,Cleveland Cle,275
+2018,2,Seattle Sea,271
+2018,2,Indianapolis Ind,334
+2018,2,Green Bay GB,480
+2018,2,Cincinnati Cin,425
+2018,2,Detroit Det,346
+2018,2,Oakland Oak,385
+2018,2,New York NYG,298
+2018,2,Tampa Bay TB,412
+2018,2,Buffalo Buf,349
+2018,2,Atlanta Atl,439
+2018,2,San Francisco SF,427
+2018,2,Arizona Ari,432
+2018,2,Pittsburgh Pit,449
+2018,2,Kansas City KC,475
+2018,3,New York NYJ,323
+2018,3,Green Bay GB,386
+2018,3,Cleveland Cle,268
+2018,3,Los Angeles LAC,521
+2018,3,Minnesota Min,292
+2018,3,Baltimore Bal,293
+2018,3,Jacksonville Jax,233
+2018,3,Houston Hou,379
+2018,3,Philadelphia Phi,209
+2018,3,Denver Den,342
+2018,3,Los Angeles LAR,356
+2018,3,Miami Mia,434
+2018,3,Chicago Chi,221
+2018,3,Tennessee Ten,232
+2018,3,New England NE,414
+2018,3,Buffalo Buf,292
+2018,3,Seattle Sea,303
+2018,3,Pittsburgh Pit,455
+2018,3,Indianapolis Ind,379
+2018,3,Carolina Car,396
+2018,3,Detroit Det,209
+2018,3,Arizona Ari,316
+2018,3,Washington Was,340
+2018,3,Dallas Dal,295
+2018,3,New York NYG,427
+2018,3,Tampa Bay TB,413
+2018,3,Kansas City KC,406
+2018,3,Cincinnati Cin,377
+2018,3,Oakland Oak,373
+2018,3,San Francisco SF,384
+2018,3,New Orleans NO,407
+2018,3,Atlanta Atl,534
+2018,4,Green Bay GB,145
+2018,4,Carolina Car,NA
+2018,4,Baltimore Bal,284
+2018,4,Los Angeles LAC,364
+2018,4,Jacksonville Jax,178
+2018,4,Minnesota Min,556
+2018,4,New England NE,172
+2018,4,Houston Hou,478
+2018,4,Cleveland Cle,565
+2018,4,Denver Den,446
+2018,4,Philadelphia Phi,397
+2018,4,Seattle Sea,263
+2018,4,Los Angeles LAR,446
+2018,4,Detroit Det,414
+2018,4,Tennessee Ten,432
+2018,4,Chicago Chi,311
+2018,4,New Orleans NO,299
+2018,4,Oakland Oak,487
+2018,4,San Francisco SF,368
+2018,4,Kansas City KC,385
+2018,4,Indianapolis Ind,466
+2018,4,Dallas Dal,382
+2018,4,Arizona Ari,331
+2018,4,Buffalo Buf,423
+2018,4,New York NYJ,503
+2018,4,Pittsburgh Pit,451
+2018,4,New York NYG,389
+2018,4,Atlanta Atl,407
+2018,4,Miami Mia,449
+2018,4,Cincinnati Cin,495
+2018,4,Tampa Bay TB,483
+2018,4,Carolina Car,NA
+2018,4,Washington Was,NA
+2018,5,Carolina Car,432
+2018,5,New York NYJ,436
+2018,5,Chicago Chi,NA
+2018,5,Los Angeles LAC,289
+2018,5,Baltimore Bal,416
+2018,5,Minnesota Min,364
+2018,5,Arizona Ari,447
+2018,5,Houston Hou,292
+2018,5,New England NE,439
+2018,5,Denver Den,512
+2018,5,Tennessee Ten,223
+2018,5,Cincinnati Cin,297
+2018,5,Philadelphia Phi,375
+2018,5,Los Angeles LAR,373
+2018,5,Jacksonville Jax,424
+2018,5,Pittsburgh Pit,324
+2018,5,Kansas City KC,502
+2018,5,Buffalo Buf,221
+2018,5,Miami Mia,332
+2018,5,New Orleans NO,283
+2018,5,Cleveland Cle,410
+2018,5,New York NYG,350
+2018,5,Green Bay GB,264
+2018,5,Detroit Det,521
+2018,5,San Francisco SF,220
+2018,5,Dallas Dal,462
+2018,5,Seattle Sea,468
+2018,5,Atlanta Atl,381
+2018,5,Oakland Oak,412
+2018,5,Indianapolis Ind,438
+2018,5,Washington Was,447
+2018,5,Chicago Chi,NA
+2018,5,Tampa Bay TB,NA
+2018,6,Green Bay GB,401
+2018,6,Indianapolis Ind,374
+2018,6,Los Angeles LAC,317
+2018,6,New York NYJ,428
+2018,6,Minnesota Min,268
+2018,6,Baltimore Bal,106
+2018,6,Dallas Dal,204
+2018,6,Seattle Sea,185
+2018,6,Houston Hou,229
+2018,6,Los Angeles LAR,357
+2018,6,Chicago Chi,541
+2018,6,Jacksonville Jax,378
+2018,6,Philadelphia Phi,401
+2018,6,Carolina Car,288
+2018,6,Buffalo Buf,216
+2018,6,Arizona Ari,411
+2018,6,Washington Was,350
+2018,6,Pittsburgh Pit,275
+2018,6,Denver Den,444
+2018,6,Miami Mia,467
+2018,6,Oakland Oak,369
+2018,6,Tennessee Ten,361
+2018,6,New York NYG,379
+2018,6,Atlanta Atl,510
+2018,6,New England NE,446
+2018,6,Tampa Bay TB,417
+2018,6,San Francisco SF,521
+2018,6,Cleveland Cle,449
+2018,6,Cincinnati Cin,481
+2018,6,Kansas City KC,500
+2018,6,Detroit Det,NA
+2018,6,New Orleans NO,NA
+2018,7,Denver Den,223
+2018,7,New England NE,453
+2018,7,Arizona Ari,309
+2018,7,Los Angeles LAC,390
+2018,7,Indianapolis Ind,303
+2018,7,Houston Hou,259
+2018,7,Minnesota Min,263
+2018,7,Dallas Dal,305
+2018,7,Baltimore Bal,339
+2018,7,New York NYJ,316
+2018,7,Philadelphia Phi,371
+2018,7,Washington Was,323
+2018,7,Chicago Chi,381
+2018,7,Los Angeles LAR,228
+2018,7,Jacksonville Jax,272
+2018,7,Detroit Det,322
+2018,7,Kansas City KC,239
+2018,7,Cleveland Cle,456
+2018,7,Tampa Bay TB,305
+2018,7,Carolina Car,342
+2018,7,Tennessee Ten,344
+2018,7,Atlanta Atl,433
+2018,7,New York NYG,423
+2018,7,New Orleans NO,351
+2018,7,Buffalo Buf,376
+2018,7,San Francisco SF,339
+2018,7,Miami Mia,457
+2018,7,Cincinnati Cin,551
+2018,7,Green Bay GB,NA
+2018,7,Oakland Oak,NA
+2018,7,Pittsburgh Pit,NA
+2018,7,Seattle Sea,NA
+2018,8,New England NE,333
+2018,8,Carolina Car,325
+2018,8,New York NYJ,395
+2018,8,Seattle Sea,331
+2018,8,Arizona Ari,267
+2018,8,Minnesota Min,270
+2018,8,Indianapolis Ind,347
+2018,8,Pittsburgh Pit,237
+2018,8,Jacksonville Jax,395
+2018,8,Baltimore Bal,386
+2018,8,Dallas Dal,NA
+2018,8,Detroit Det,413
+2018,8,Houston Hou,370
+2018,8,Chicago Chi,207
+2018,8,Washington Was,303
+2018,8,Los Angeles LAR,359
+2018,8,Philadelphia Phi,335
+2018,8,Cincinnati Cin,576
+2018,8,New Orleans NO,423
+2018,8,San Francisco SF,321
+2018,8,Kansas City KC,411
+2018,8,Buffalo Buf,387
+2018,8,Denver Den,340
+2018,8,New York NYG,360
+2018,8,Green Bay GB,416
+2018,8,Cleveland Cle,421
+2018,8,Tampa Bay TB,402
+2018,8,Oakland Oak,461
+2018,8,Miami Mia,427
+2018,8,Atlanta Atl,NA
+2018,8,Dallas Dal,NA
+2018,8,Tennessee Ten,NA
+2018,8,Los Angeles LAC,NA
+2018,9,Houston Hou,348
+2018,9,Indianapolis Ind,NA
+2018,9,Kansas City KC,388
+2018,9,Carolina Car,301
+2018,9,Chicago Chi,264
+2018,9,Minnesota Min,209
+2018,9,Miami Mia,282
+2018,9,Tennessee Ten,297
+2018,9,Denver Den,290
+2018,9,Dallas Dal,340
+2018,9,Los Angeles LAC,356
+2018,9,New York NYJ,168
+2018,9,Buffalo Buf,190
+2018,9,Los Angeles LAR,487
+2018,9,Detroit Det,283
+2018,9,Washington Was,491
+2018,9,San Francisco SF,242
+2018,9,Jacksonville Jax,NA
+2018,9,Atlanta Atl,366
+2018,9,Pittsburgh Pit,265
+2018,9,New England NE,367
+2018,9,Seattle Sea,375
+2018,9,Baltimore Bal,395
+2018,9,Green Bay GB,433
+2018,9,Cleveland Cle,499
+2018,9,Oakland Oak,405
+2018,9,New Orleans NO,483
+2018,9,Tampa Bay TB,407
+2018,9,Cincinnati Cin,NA
+2018,9,Indianapolis Ind,NA
+2018,9,New York NYG,NA
+2018,9,Philadelphia Phi,NA
+2018,9,Arizona Ari,NA
+2018,9,Jacksonville Jax,NA
+2018,10,Kansas City KC,260
+2018,10,Arizona Ari,330
+2018,10,Buffalo Buf,199
+2018,10,Los Angeles LAR,414
+2018,10,Indianapolis Ind,415
+2018,10,Houston Hou,NA
+2018,10,Carolina Car,457
+2018,10,San Francisco SF,277
+2018,10,Minnesota Min,NA
+2018,10,New York NYJ,451
+2018,10,Philadelphia Phi,410
+2018,10,Washington Was,501
+2018,10,Los Angeles LAC,317
+2018,10,Green Bay GB,294
+2018,10,New England NE,385
+2018,10,Jacksonville Jax,366
+2018,10,Chicago Chi,305
+2018,10,Atlanta Atl,427
+2018,10,Pittsburgh Pit,242
+2018,10,New Orleans NO,284
+2018,10,Tennessee Ten,284
+2018,10,Cleveland Cle,382
+2018,10,Tampa Bay TB,286
+2018,10,Miami Mia,377
+2018,10,Oakland Oak,335
+2018,10,New York NYG,374
+2018,10,Dallas Dal,421
+2018,10,Detroit Det,402
+2018,10,Seattle Sea,456
+2018,10,Cincinnati Cin,509
+2018,10,Denver Den,NA
+2018,10,Minnesota Min,NA
+2018,10,Baltimore Bal,NA
+2018,10,Houston Hou,NA
+2018,11,Arizona Ari,325
+2018,11,New England NE,NA
+2018,11,Los Angeles LAR,546
+2018,11,Washington Was,320
+2018,11,Carolina Car,309
+2018,11,Tennessee Ten,397
+2018,11,Minnesota Min,308
+2018,11,Chicago Chi,268
+2018,11,Baltimore Bal,255
+2018,11,New Orleans NO,196
+2018,11,Los Angeles LAC,325
+2018,11,Pittsburgh Pit,243
+2018,11,Houston Hou,278
+2018,11,Green Bay GB,378
+2018,11,Indianapolis Ind,263
+2018,11,Jacksonville Jax,323
+2018,11,Oakland Oak,282
+2018,11,Kansas City KC,455
+2018,11,Dallas Dal,354
+2018,11,Detroit Det,387
+2018,11,New York NYG,510
+2018,11,Seattle Sea,359
+2018,11,Denver Den,479
+2018,11,Tampa Bay TB,359
+2018,11,Atlanta Atl,323
+2018,11,Cincinnati Cin,403
+2018,11,Buffalo Buf,NA
+2018,11,Cleveland Cle,NA
+2018,11,Miami Mia,NA
+2018,11,New England NE,NA
+2018,11,Philadelphia Phi,546
+2018,11,New York NYJ,NA
+2018,11,San Francisco SF,NA
+2018,12,New England NE,338
+2018,12,Los Angeles LAR,NA
+2018,12,Miami Mia,455
+2018,12,Jacksonville Jax,327
+2018,12,Carolina Car,397
+2018,12,Washington Was,404
+2018,12,Minnesota Min,254
+2018,12,Buffalo Buf,333
+2018,12,Baltimore Bal,249
+2018,12,Indianapolis Ind,314
+2018,12,Los Angeles LAC,149
+2018,12,Seattle Sea,476
+2018,12,Chicago Chi,333
+2018,12,Houston Hou,365
+2018,12,Pittsburgh Pit,308
+2018,12,Tennessee Ten,462
+2018,12,Dallas Dal,331
+2018,12,Philadelphia Phi,402
+2018,12,New Orleans NO,366
+2018,12,Tampa Bay TB,342
+2018,12,Detroit Det,264
+2018,12,Cleveland Cle,372
+2018,12,Denver Den,527
+2018,12,Atlanta Atl,312
+2018,12,New York NYG,341
+2018,12,Oakland Oak,416
+2018,12,Green Bay GB,416
+2018,12,Arizona Ari,414
+2018,12,San Francisco SF,412
+2018,12,New York NYJ,498
+2018,12,Cincinnati Cin,342
+2018,12,Kansas City KC,NA
+2018,12,Los Angeles LAR,NA
+2018,13,Kansas City KC,442
+2018,13,New England NE,278
+2018,13,Los Angeles LAR,310
+2018,13,Baltimore Bal,131
+2018,13,Philadelphia Phi,235
+2018,13,Carolina Car,315
+2018,13,Denver Den,311
+2018,13,Miami Mia,415
+2018,13,Minnesota Min,471
+2018,13,Green Bay GB,315
+2018,13,Jacksonville Jax,265
+2018,13,Pittsburgh Pit,371
+2018,13,Houston Hou,428
+2018,13,Seattle Sea,452
+2018,13,Los Angeles LAC,336
+2018,13,Cleveland Cle,384
+2018,13,Tennessee Ten,280
+2018,13,Indianapolis Ind,211
+2018,13,Buffalo Buf,175
+2018,13,Chicago Chi,338
+2018,13,Washington Was,436
+2018,13,New York NYG,376
+2018,13,New Orleans NO,308
+2018,13,New York NYJ,403
+2018,13,Atlanta Atl,366
+2018,13,Dallas Dal,176
+2018,13,Tampa Bay TB,444
+2018,13,Detroit Det,344
+2018,13,Cincinnati Cin,361
+2018,13,Arizona Ari,325
+2018,13,San Francisco SF,331
+2018,13,Oakland Oak,469
+2019,1,Seattle Sea,429
+2019,1,Houston Hou,510
+2019,1,New England NE,308
+2019,1,Cleveland Cle,339
+2019,1,Denver Den,357
+2019,1,Jacksonville Jax,491
+2019,1,Chicago Chi,213
+2019,1,Philadelphia Phi,398
+2019,1,New Orleans NO,414
+2019,1,Los Angeles LAR,343
+2019,1,Baltimore Bal,200
+2019,1,Green Bay GB,254
+2019,1,Dallas Dal,470
+2019,1,Los Angeles LAC,376
+2019,1,San Francisco SF,295
+2019,1,Tennessee Ten,346
+2019,1,New York NYJ,370
+2019,1,Minnesota Min,345
+2019,1,Tampa Bay TB,256
+2019,1,Buffalo Buf,223
+2019,1,Cincinnati Cin,232
+2019,1,Detroit Det,387
+2019,1,Oakland Oak,344
+2019,1,Carolina Car,349
+2019,1,Indianapolis Ind,435
+2019,1,Arizona Ari,477
+2019,1,Atlanta Atl,269
+2019,1,Kansas City KC,428
+2019,1,Pittsburgh Pit,465
+2019,1,Washington Was,436
+2019,1,New York NYG,494
+2019,1,Miami Mia,643
+2019,2,New England NE,184
+2019,2,Buffalo Buf,370
+2019,2,Houston Hou,281
+2019,2,Green Bay GB,421
+2019,2,Cleveland Cle,262
+2019,2,Tennessee Ten,288
+2019,2,Chicago Chi,372
+2019,2,Los Angeles LAC,339
+2019,2,New York NYJ,375
+2019,2,Jacksonville Jax,263
+2019,2,New Orleans NO,380
+2019,2,Dallas Dal,255
+2019,2,Baltimore Bal,349
+2019,2,Los Angeles LAR,244
+2019,2,Atlanta Atl,286
+2019,2,Kansas City KC,307
+2019,2,Carolina Car,289
+2019,2,Tampa Bay TB,352
+2019,2,Indianapolis Ind,243
+2019,2,Philadelphia Phi,367
+2019,2,San Francisco SF,316
+2019,2,Minnesota Min,335
+2019,2,Seattle Sea,261
+2019,2,Detroit Det,424
+2019,2,Denver Den,273
+2019,2,Pittsburgh Pit,425
+2019,2,Miami Mia,379
+2019,2,New York NYG,388
+2019,2,Oakland Oak,467
+2019,2,Arizona Ari,440
+2019,2,Washington Was,474
+2019,2,Cincinnati Cin,571
+2019,3,Minnesota Min,302
+2019,3,Seattle Sea,265
+2019,3,New England NE,105
+2019,3,Houston Hou,366
+2019,3,Chicago Chi,356
+2019,3,Jacksonville Jax,340
+2019,3,Tampa Bay TB,384
+2019,3,Los Angeles LAC,376
+2019,3,Buffalo Buf,306
+2019,3,Tennessee Ten,292
+2019,3,San Francisco SF,239
+2019,3,Baltimore Bal,503
+2019,3,Dallas Dal,283
+2019,3,Los Angeles LAR,270
+2019,3,Green Bay GB,310
+2019,3,New York NYJ,381
+2019,3,Carolina Car,248
+2019,3,Detroit Det,373
+2019,3,Cleveland Cle,344
+2019,3,New Orleans NO,514
+2019,3,Pittsburgh Pit,436
+2019,3,Washington Was,298
+2019,3,Philadelphia Phi,287
+2019,3,New York NYG,499
+2019,3,Indianapolis Ind,397
+2019,3,Cincinnati Cin,416
+2019,3,Atlanta Atl,379
+2019,3,Denver Den,312
+2019,3,Oakland Oak,385
+2019,3,Kansas City KC,452
+2019,3,Miami Mia,476
+2019,3,Arizona Ari,413
+2019,4,Minnesota Min,269
+2019,4,Chicago Chi,222
+2019,4,Houston Hou,297
+2019,4,Jacksonville Jax,371
+2019,4,New England NE,375
+2019,4,Green Bay GB,336
+2019,4,Seattle Sea,321
+2019,4,Los Angeles LAC,233
+2019,4,Tampa Bay TB,518
+2019,4,Atlanta Atl,365
+2019,4,New York NYG,176
+2019,4,Baltimore Bal,530
+2019,4,Los Angeles LAR,464
+2019,4,Indianapolis Ind,377
+2019,4,Pittsburgh Pit,175
+2019,4,Carolina Car,264
+2019,4,Dallas Dal,266
+2019,4,New Orleans NO,257
+2019,4,Cleveland Cle,395
+2019,4,Oakland Oak,346
+2019,4,Kansas City KC,447
+2019,4,Washington Was,389
+2019,4,Tennessee Ten,422
+2019,4,Buffalo Buf,224
+2019,4,Arizona Ari,340
+2019,4,Cincinnati Cin,326
+2019,4,Denver Den,455
+2019,4,Detroit Det,438
+2019,4,Philadelphia Phi,491
+2019,4,Miami Mia,390
+2019,4,New York NYJ,NA
+2019,4,San Francisco SF,NA
+2019,5,Tennessee Ten,313
+2019,5,Carolina Car,507
+2019,5,Houston Hou,373
+2019,5,Chicago Chi,398
+2019,5,New England NE,223
+2019,5,Minnesota Min,211
+2019,5,New York NYG,490
+2019,5,Jacksonville Jax,445
+2019,5,Baltimore Bal,269
+2019,5,San Francisco SF,180
+2019,5,Los Angeles LAR,429
+2019,5,Los Angeles LAC,350
+2019,5,Philadelphia Phi,128
+2019,5,Green Bay GB,563
+2019,5,Denver Den,246
+2019,5,Pittsburgh Pit,277
+2019,5,Buffalo Buf,252
+2019,5,Oakland Oak,236
+2019,5,Indianapolis Ind,324
+2019,5,New Orleans NO,252
+2019,5,New York NYJ,265
+2019,5,Kansas City KC,331
+2019,5,Washington Was,442
+2019,5,Dallas Dal,335
+2019,5,Arizona Ari,370
+2019,5,Cleveland Cle,446
+2019,5,Seattle Sea,477
+2019,5,Tampa Bay TB,457
+2019,5,Cincinnati Cin,514
+2019,5,Atlanta Atl,592
+2019,5,Detroit Det,NA
+2019,6,Dallas Dal,382
+2019,6,Buffalo Buf,NA
+2019,6,New York NYG,427
+2019,6,Houston Hou,309
+2019,6,Los Angeles LAC,256
+2019,6,New England NE,213
+2019,6,Miami Mia,311
+2019,6,Chicago Chi,NA
+2019,6,Tennessee Ten,270
+2019,6,Green Bay GB,299
+2019,6,Carolina Car,407
+2019,6,Los Angeles LAR,331
+2019,6,Baltimore Bal,250
+2019,6,Seattle Sea,406
+2019,6,New Orleans NO,226
+2019,6,San Francisco SF,157
+2019,6,Denver Den,204
+2019,6,Pittsburgh Pit,348
+2019,6,Washington Was,271
+2019,6,Jacksonville Jax,326
+2019,6,Cincinnati Cin,497
+2019,6,Minnesota Min,400
+2019,6,Detroit Det,447
+2019,6,Tampa Bay TB,268
+2019,6,Kansas City KC,472
+2019,6,New York NYJ,399
+2019,6,Cleveland Cle,454
+2019,6,Philadelphia Phi,447
+2019,6,Arizona Ari,444
+2019,6,Atlanta Atl,442
+2019,6,Chicago Chi,NA
+2019,6,Buffalo Buf,NA
+2019,6,Indianapolis Ind,NA
+2019,6,Oakland Oak,NA
+2019,7,Buffalo Buf,381
+2019,7,Pittsburgh Pit,NA
+2019,7,Jacksonville Jax,291
+2019,7,Houston Hou,383
+2019,7,Philadelphia Phi,402
+2019,7,New England NE,154
+2019,7,New Orleans NO,252
+2019,7,New York NYJ,323
+2019,7,Tennessee Ten,365
+2019,7,Chicago Chi,424
+2019,7,New York NYG,245
+2019,7,Los Angeles LAC,403
+2019,7,Los Angeles LAR,224
+2019,7,Minnesota Min,433
+2019,7,San Francisco SF,154
+2019,7,Green Bay GB,484
+2019,7,Kansas City KC,205
+2019,7,Baltimore Bal,347
+2019,7,Dallas Dal,283
+2019,7,Arizona Ari,263
+2019,7,Washington Was,283
+2019,7,Indianapolis Ind,391
+2019,7,Denver Den,271
+2019,7,Seattle Sea,340
+2019,7,Miami Mia,305
+2019,7,Atlanta Atl,381
+2019,7,Cincinnati Cin,460
+2019,7,Oakland Oak,481
+2019,7,Cleveland Cle,NA
+2019,7,Detroit Det,504
+2019,7,Pittsburgh Pit,NA
+2019,7,Tampa Bay TB,NA
+2019,7,Carolina Car,NA
+2019,8,Pittsburgh Pit,230
+2019,8,Buffalo Buf,371
+2019,8,Los Angeles LAR,401
+2019,8,Houston Hou,378
+2019,8,Jacksonville Jax,213
+2019,8,Baltimore Bal,NA
+2019,8,New England NE,310
+2019,8,New York NYJ,389
+2019,8,Indianapolis Ind,279
+2019,8,Tennessee Ten,389
+2019,8,Seattle Sea,510
+2019,8,Chicago Chi,231
+2019,8,Green Bay GB,337
+2019,8,New Orleans NO,237
+2019,8,Minnesota Min,216
+2019,8,San Francisco SF,230
+2019,8,Los Angeles LAC,388
+2019,8,Philadelphia Phi,253
+2019,8,Detroit Det,370
+2019,8,New York NYG,375
+2019,8,Tampa Bay TB,246
+2019,8,Denver Den,318
+2019,8,Cleveland Cle,318
+2019,8,Kansas City KC,374
+2019,8,Miami Mia,394
+2019,8,Oakland Oak,388
+2019,8,Carolina Car,388
+2019,8,Washington Was,434
+2019,8,Atlanta Atl,322
+2019,8,Cincinnati Cin,470
+2019,8,Arizona Ari,510
+2019,8,Dallas Dal,NA
+2019,8,Baltimore Bal,NA
+2019,9,Buffalo Buf,243
+2019,9,Cleveland Cle,302
+2019,9,Carolina Car,431
+2019,9,Houston Hou,356
+2019,9,Pittsburgh Pit,328
+2019,9,New York NYJ,316
+2019,9,New England NE,372
+2019,9,Jacksonville Jax,410
+2019,9,Baltimore Bal,342
+2019,9,Philadelphia Phi,164
+2019,9,Indianapolis Ind,273
+2019,9,Chicago Chi,373
+2019,9,Seattle Sea,418
+2019,9,San Francisco SF,357
+2019,9,Minnesota Min,377
+2019,9,Los Angeles LAC,184
+2019,9,Green Bay GB,442
+2019,9,Dallas Dal,271
+2019,9,Miami Mia,321
+2019,9,Tennessee Ten,370
+2019,9,Washington Was,268
+2019,9,Denver Den,351
+2019,9,Oakland Oak,473
+2019,9,Kansas City KC,308
+2019,9,New York NYG,429
+2019,9,Tampa Bay TB,492
+2019,9,Detroit Det,450
+2019,9,Arizona Ari,411
+2019,9,Atlanta Atl,NA
+2019,9,Los Angeles LAR,NA
+2019,9,New Orleans NO,NA
+2019,10,Buffalo Buf,368
+2019,10,Philadelphia Phi,NA
+2019,10,San Francisco SF,336
+2019,10,Kansas City KC,371
+2019,10,Houston Hou,NA
+2019,10,Indianapolis Ind,229
+2019,10,New Orleans NO,317
+2019,10,New England NE,NA
+2019,10,Pittsburgh Pit,306
+2019,10,New York NYG,294
+2019,10,Baltimore Bal,307
+2019,10,Jacksonville Jax,NA
+2019,10,Chicago Chi,357
+2019,10,Los Angeles LAR,273
+2019,10,Carolina Car,388
+2019,10,Seattle Sea,302
+2019,10,Green Bay GB,401
+2019,10,Los Angeles LAC,278
+2019,10,Minnesota Min,443
+2019,10,New York NYJ,281
+2019,10,Oakland Oak,315
+2019,10,Miami Mia,300
+2019,10,Atlanta Atl,310
+2019,10,Detroit Det,226
+2019,10,Arizona Ari,457
+2019,10,Tennessee Ten,530
+2019,10,Tampa Bay TB,417
+2019,10,Cleveland Cle,344
+2019,10,Dallas Dal,364
+2019,10,Cincinnati Cin,379
+2019,10,Denver Den,NA
+2019,10,New England NE,NA
+2019,10,Philadelphia Phi,NA
+2019,10,Washington Was,NA
+2019,10,Jacksonville Jax,NA
+2019,10,Houston Hou,NA
+2019,11,Buffalo Buf,303
+2019,11,Philadelphia Phi,298
+2019,11,New York NYJ,225
+2019,11,Kansas City KC,438
+2019,11,Oakland Oak,246
+2019,11,Los Angeles LAR,267
+2019,11,New England NE,255
+2019,11,San Francisco SF,266
+2019,11,Dallas Dal,312
+2019,11,Green Bay GB,NA
+2019,11,Pittsburgh Pit,293
+2019,11,Chicago Chi,283
+2019,11,Baltimore Bal,232
+2019,11,Jacksonville Jax,389
+2019,11,New Orleans NO,334
+2019,11,Washington Was,400
+2019,11,Minnesota Min,394
+2019,11,Cleveland Cle,236
+2019,11,Atlanta Atl,347
+2019,11,Denver Den,321
+2019,11,Indianapolis Ind,308
+2019,11,Cincinnati Cin,386
+2019,11,Los Angeles LAC,310
+2019,11,Carolina Car,349
+2019,11,Arizona Ari,442
+2019,11,Tampa Bay TB,328
+2019,11,Miami Mia,424
+2019,11,Detroit Det,509
+2019,11,Houston Hou,491
+2019,11,Green Bay GB,NA
+2019,11,Tennessee Ten,NA
+2019,11,New York NYG,NA
+2019,11,Seattle Sea,NA
+2019,12,Buffalo Buf,134
+2019,12,Philadelphia Phi,348
+2019,12,Tennessee Ten,369
+2019,12,Jacksonville Jax,471
+2019,12,San Francisco SF,198
+2019,12,New England NE,321
+2019,12,New York NYJ,208
+2019,12,Atlanta Atl,446
+2019,12,Green Bay GB,339
+2019,12,Kansas City KC,NA
+2019,12,Oakland Oak,401
+2019,12,Chicago Chi,243
+2019,12,Pittsburgh Pit,244
+2019,12,New Orleans NO,351
+2019,12,Baltimore Bal,221
+2019,12,Detroit Det,230
+2019,12,Cleveland Cle,284
+2019,12,Washington Was,364
+2019,12,Tampa Bay TB,337
+2019,12,Seattle Sea,344
+2019,12,Dallas Dal,282
+2019,12,New York NYG,335
+2019,12,Cincinnati Cin,338
+2019,12,Houston Hou,296
+2019,12,Indianapolis Ind,396
+2019,12,Denver Den,424
+2019,12,Carolina Car,418
+2019,12,Miami Mia,467
+2019,12,Los Angeles LAR,480
+2019,12,Kansas City KC,NA
+2019,12,Minnesota Min,NA
+2019,12,Arizona Ari,NA
+2019,12,Los Angeles LAC,NA
+2019,13,Philadelphia Phi,409
+2019,13,Indianapolis Ind,292
+2019,13,Minnesota Min,444
+2019,13,Cleveland Cle,323
+2019,13,Jacksonville Jax,315
+2019,13,Green Bay GB,335
+2019,13,Kansas City KC,332
+2019,13,New England NE,276
+2019,13,Los Angeles LAR,198
+2019,13,Chicago Chi,364
+2019,13,Los Angeles LAC,218
+2019,13,New Orleans NO,348
+2019,13,Carolina Car,362
+2019,13,Dallas Dal,356
+2019,13,Baltimore Bal,331
+2019,13,New York NYJ,277
+2019,13,Pittsburgh Pit,279
+2019,13,Arizona Ari,549
+2019,13,San Francisco SF,283
+2019,13,Tampa Bay TB,242
+2019,13,Tennessee Ten,391
+2019,13,Washington Was,278
+2019,13,Cincinnati Cin,271
+2019,13,Denver Den,359
+2019,13,Buffalo Buf,426
+2019,13,Seattle Sea,354
+2019,13,Miami Mia,386
+2019,13,Atlanta Atl,279
+2019,13,Oakland Oak,259
+2019,13,Houston Hou,448
+2019,13,Detroit Det,419
+2019,13,New York NYG,322
+2020,1,Philadelphia Phi,239
+2020,1,New Orleans NO,310
+2020,1,Detroit Det,363
+2020,1,Tennessee Ten,323
+2020,1,Pittsburgh Pit,291
+2020,1,New England NE,269
+2020,1,Kansas City KC,360
+2020,1,San Francisco SF,404
+2020,1,Buffalo Buf,254
+2020,1,Indianapolis Ind,241
+2020,1,Los Angeles LAC,295
+2020,1,Baltimore Bal,306
+2020,1,Chicago Chi,426
+2020,1,Minnesota Min,522
+2020,1,Washington Was,265
+2020,1,Arizona Ari,366
+2020,1,Green Bay GB,382
+2020,1,Denver Den,377
+2020,1,Miami Mia,357
+2020,1,Los Angeles LAR,380
+2020,1,New York NYG,349
+2020,1,New York NYJ,404
+2020,1,Cincinnati Cin,362
+2020,1,Tampa Bay TB,271
+2020,1,Jacksonville Jax,445
+2020,1,Dallas Dal,422
+2020,1,Cleveland Cle,381
+2020,1,Las Vegas LV,388
+2020,1,Seattle Sea,506
+2020,1,Houston Hou,369
+2020,1,Atlanta Atl,383
+2020,1,Carolina Car,372
+2020,2,Tampa Bay TB,427
+2020,2,Arizona Ari,316
+2020,2,New England NE,429
+2020,2,Los Angeles LAR,363
+2020,2,Buffalo Buf,410
+2020,2,Tennessee Ten,480
+2020,2,Cleveland Cle,353
+2020,2,Kansas City KC,479
+2020,2,New Orleans NO,377
+2020,2,Baltimore Bal,304
+2020,2,San Francisco SF,277
+2020,2,Pittsburgh Pit,319
+2020,2,Chicago Chi,295
+2020,2,Minnesota Min,354
+2020,2,Indianapolis Ind,175
+2020,2,Green Bay GB,307
+2020,2,New York NYG,304
+2020,2,New York NYJ,359
+2020,2,Carolina Car,339
+2020,2,Denver Den,410
+2020,2,Washington Was,438
+2020,2,Houston Hou,407
+2020,2,Jacksonville Jax,354
+2020,2,Los Angeles LAC,414
+2020,2,Seattle Sea,464
+2020,2,Las Vegas LV,424
+2020,2,Philadelphia Phi,449
+2020,2,Atlanta Atl,570
+2020,2,Dallas Dal,380
+2020,2,Miami Mia,523
+2020,2,Cincinnati Cin,434
+2020,2,Detroit Det,488
+2020,3,Tampa Bay TB,226
+2020,3,Washington Was,300
+2020,3,Los Angeles LAR,375
+2020,3,Denver Den,353
+2020,3,New England NE,375
+2020,3,Arizona Ari,322
+2020,3,Philadelphia Phi,304
+2020,3,Chicago Chi,371
+2020,3,Tennessee Ten,464
+2020,3,San Francisco SF,231
+2020,3,Buffalo Buf,478
+2020,3,Los Angeles LAC,302
+2020,3,Baltimore Bal,517
+2020,3,New Orleans NO,369
+2020,3,Pittsburgh Pit,260
+2020,3,Indianapolis Ind,260
+2020,3,Cleveland Cle,309
+2020,3,Miami Mia,318
+2020,3,Kansas City KC,228
+2020,3,Carolina Car,436
+2020,3,Cincinnati Cin,381
+2020,3,Detroit Det,377
+2020,3,Seattle Sea,522
+2020,3,Green Bay GB,397
+2020,3,Jacksonville Jax,294
+2020,3,Atlanta Atl,437
+2020,3,Houston Hou,387
+2020,3,New York NYJ,353
+2020,3,Las Vegas LV,406
+2020,3,Minnesota Min,444
+2020,3,Dallas Dal,412
+2020,3,New York NYG,420
+2020,4,Tampa Bay TB,324
+2020,4,Baltimore Bal,343
+2020,4,Seattle Sea,415
+2020,4,NA,NA
+2020,4,Los Angeles LAR,295
+2020,4,Arizona Ari,444
+2020,4,New England NE,323
+2020,4,Kansas City KC,357
+2020,4,Houston Hou,410
+2020,4,New Orleans NO,281
+2020,4,Buffalo Buf,383
+2020,4,San Francisco SF,267
+2020,4,Los Angeles LAC,484
+2020,4,Denver Den,321
+2020,4,Chicago Chi,289
+2020,4,Indianapolis Ind,269
+2020,4,Philadelphia Phi,417
+2020,4,New York NYJ,359
+2020,4,New York NYG,240
+2020,4,Carolina Car,262
+2020,4,Green Bay GB,327
+2020,4,Minnesota Min,386
+2020,4,Washington Was,350
+2020,4,Cincinnati Cin,429
+2020,4,Tennessee Ten,NA
+2020,4,Pittsburgh Pit,NA
+2020,4,Detroit Det,392
+2020,4,Las Vegas LV,337
+2020,4,Miami Mia,441
+2020,4,Cleveland Cle,566
+2020,4,Atlanta Atl,403
+2020,4,Jacksonville Jax,505
+2020,4,Dallas Dal,508
+2020,5,Tampa Bay TB,243
+2020,5,Los Angeles LAC,408
+2020,5,Houston Hou,364
+2020,5,Los Angeles LAR,108
+2020,5,Cleveland Cle,308
+2020,5,Arizona Ari,285
+2020,5,NA,NA
+2020,5,Washington Was,429
+2020,5,Indianapolis Ind,385
+2020,5,Kansas City KC,490
+2020,5,Baltimore Bal,205
+2020,5,Buffalo Buf,334
+2020,5,New Orleans NO,350
+2020,5,Pittsburgh Pit,336
+2020,5,Dallas Dal,300
+2020,5,San Francisco SF,436
+2020,5,NA,NA
+2020,5,New York NYG,402
+2020,5,Miami Mia,259
+2020,5,Tennessee Ten,370
+2020,5,Chicago Chi,339
+2020,5,Minnesota Min,314
+2020,5,Carolina Car,369
+2020,5,Seattle Sea,449
+2020,5,Cincinnati Cin,332
+2020,5,Denver Den,NA
+2020,5,Green Bay GB,NA
+2020,5,Detroit Det,NA
+2020,5,Las Vegas LV,413
+2020,5,New England NE,NA
+2020,5,Jacksonville Jax,486
+2020,5,Philadelphia Phi,367
+2020,5,New York NYJ,496
+2020,5,Atlanta Atl,437
+2020,6,Washington Was,240
+2020,6,Philadelphia Phi,355
+2020,6,Buffalo Buf,466
+2020,6,Los Angeles LAR,390
+2020,6,Indianapolis Ind,398
+2020,6,New England NE,299
+2020,6,Baltimore Bal,364
+2020,6,Chicago Chi,303
+2020,6,Kansas City KC,206
+2020,6,Miami Mia,263
+2020,6,Carolina Car,261
+2020,6,Pittsburgh Pit,220
+2020,6,San Francisco SF,311
+2020,6,New York NYG,337
+2020,6,Green Bay GB,324
+2020,6,Tampa Bay TB,201
+2020,6,Denver Den,288
+2020,6,Arizona Ari,344
+2020,6,Detroit Det,275
+2020,6,Atlanta Atl,365
+2020,6,New York NYJ,302
+2020,6,Cleveland Cle,277
+2020,6,Cincinnati Cin,430
+2020,6,Las Vegas LV,NA
+2020,6,New Orleans NO,NA
+2020,6,Los Angeles LAC,NA
+2020,6,Seattle Sea,NA
+2020,6,Houston Hou,601
+2020,6,Jacksonville Jax,403
+2020,6,Minnesota Min,462
+2020,6,Tennessee Ten,412
+2020,6,Dallas Dal,438
+2020,7,Philadelphia Phi,325
+2020,7,New York NYG,442
+2020,7,Los Angeles LAR,279
+2020,7,New England NE,467
+2020,7,Chicago Chi,371
+2020,7,San Francisco SF,241
+2020,7,NA,NA
+2020,7,Kansas City KC,411
+2020,7,Buffalo Buf,190
+2020,7,Dallas Dal,397
+2020,7,New Orleans NO,283
+2020,7,Pittsburgh Pit,292
+2020,7,Green Bay GB,365
+2020,7,Tampa Bay TB,347
+2020,7,Cleveland Cle,468
+2020,7,Los Angeles LAC,294
+2020,7,Washington Was,142
+2020,7,Arizona Ari,572
+2020,7,Tennessee Ten,362
+2020,7,Jacksonville Jax,484
+2020,7,New York NYJ,422
+2020,7,Indianapolis Ind,NA
+2020,7,Minnesota Min,NA
+2020,7,Baltimore Bal,NA
+2020,7,Miami Mia,NA
+2020,7,Detroit Det,388
+2020,7,Carolina Car,415
+2020,7,Atlanta Atl,386
+2020,7,Denver Den,286
+2020,7,Seattle Sea,519
+2020,7,Houston Hou,379
+2020,7,Cincinnati Cin,398
+2020,7,Las Vegas LV,454
+2020,8,Pittsburgh Pit,457
+2020,8,Philadelphia Phi,265
+2020,8,NA,NA
+2020,8,Los Angeles LAR,145
+2020,8,Indianapolis Ind,326
+2020,8,New England NE,339
+2020,8,Chicago Chi,394
+2020,8,Kansas City KC,221
+2020,8,New York NYG,344
+2020,8,Buffalo Buf,349
+2020,8,Baltimore Bal,221
+2020,8,Tampa Bay TB,357
+2020,8,Tennessee Ten,367
+2020,8,Green Bay GB,324
+2020,8,Los Angeles LAC,351
+2020,8,New Orleans NO,329
+2020,8,Miami Mia,471
+2020,8,Dallas Dal,222
+2020,8,Las Vegas LV,223
+2020,8,Seattle Sea,351
+2020,8,Atlanta Atl,304
+2020,8,Cleveland Cle,309
+2020,8,Denver Den,485
+2020,8,Cincinnati Cin,441
+2020,8,Arizona Ari,NA
+2020,8,Carolina Car,401
+2020,8,Washington Was,NA
+2020,8,Jacksonville Jax,NA
+2020,8,Houston Hou,NA
+2020,8,Detroit Det,366
+2020,8,Minnesota Min,400
+2020,8,San Francisco SF,350
+2020,8,New York NYJ,496
+2020,9,Washington Was,350
+2020,9,NA,NA
+2020,9,Tennessee Ten,375
+2020,9,Tampa Bay TB,420
+2020,9,Atlanta Atl,405
+2020,9,Houston Hou,412
+2020,9,New England NE,322
+2020,9,Indianapolis Ind,266
+2020,9,Chicago Chi,228
+2020,9,Arizona Ari,312
+2020,9,Buffalo Buf,419
+2020,9,Pittsburgh Pit,364
+2020,9,Kansas City KC,435
+2020,9,Baltimore Bal,339
+2020,9,New York NYG,402
+2020,9,New Orleans NO,194
+2020,9,Green Bay GB,337
+2020,9,Minnesota Min,421
+2020,9,Miami Mia,442
+2020,9,Jacksonville Jax,374
+2020,9,Denver Den,363
+2020,9,Dallas Dal,355
+2020,9,Los Angeles LAC,320
+2020,9,Carolina Car,397
+2020,9,Cleveland Cle,NA
+2020,9,Cincinnati Cin,NA
+2020,9,Detroit Det,487
+2020,9,Las Vegas LV,440
+2020,9,Los Angeles LAR,NA
+2020,9,Philadelphia Phi,NA
+2020,9,Seattle Sea,420
+2020,9,San Francisco SF,405
+2020,9,New York NYJ,433
+2020,10,Philadelphia Phi,382
+2020,10,Los Angeles LAC,280
+2020,10,New Orleans NO,281
+2020,10,Las Vegas LV,313
+2020,10,Green Bay GB,260
+2020,10,New England NE,357
+2020,10,Miami Mia,273
+2020,10,Buffalo Buf,453
+2020,10,Arizona Ari,369
+2020,10,Chicago Chi,385
+2020,10,New York NYG,346
+2020,10,Minnesota Min,149
+2020,10,Tampa Bay TB,187
+2020,10,Indianapolis Ind,294
+2020,10,Detroit Det,464
+2020,10,Pittsburgh Pit,324
+2020,10,Baltimore Bal,308
+2020,10,Los Angeles LAR,333
+2020,10,Jacksonville Jax,395
+2020,10,San Francisco SF,237
+2020,10,Cleveland Cle,243
+2020,10,Seattle Sea,389
+2020,10,Houston Hou,356
+2020,10,Atlanta Atl,NA
+2020,10,Dallas Dal,NA
+2020,10,Kansas City KC,NA
+2020,10,New York NYJ,NA
+2020,10,Washington Was,372
+2020,10,Tennessee Ten,430
+2020,10,Cincinnati Cin,377
+2020,10,Denver Den,357
+2020,10,Carolina Car,544
+2020,11,Los Angeles LAC,292
+2020,11,Los Angeles LAR,251
+2020,11,Cleveland Cle,315
+2020,11,Miami Mia,459
+2020,11,Detroit Det,374
+2020,11,Pittsburgh Pit,206
+2020,11,New England NE,399
+2020,11,Minnesota Min,376
+2020,11,New Orleans NO,248
+2020,11,Atlanta Atl,376
+2020,11,NA,NA
+2020,11,Cincinnati Cin,325
+2020,11,Washington Was,272
+2020,11,Green Bay GB,420
+2020,11,Baltimore Bal,423
+2020,11,Tampa Bay TB,413
+2020,11,Carolina Car,185
+2020,11,Denver Den,223
+2020,11,Indianapolis Ind,367
+2020,11,Philadelphia Phi,324
+2020,11,New York NYJ,376
+2020,11,Seattle Sea,314
+2020,11,Tennessee Ten,306
+2020,11,Arizona Ari,347
+2020,11,Jacksonville Jax,373
+2020,11,Dallas Dal,430
+2020,11,Kansas City KC,364
+2020,11,Chicago Chi,NA
+2020,11,Buffalo Buf,NA
+2020,11,New York NYG,NA
+2020,11,San Francisco SF,NA
+2020,11,Houston Hou,435
+2020,11,Las Vegas LV,460
+2020,12,Los Angeles LAR,345
+2020,12,Kansas City KC,417
+2020,12,Seattle Sea,250
+2020,12,Cleveland Cle,375
+2020,12,Minnesota Min,374
+2020,12,Miami Mia,260
+2020,12,Cincinnati Cin,386
+2020,12,San Francisco SF,308
+2020,12,New York NYG,155
+2020,12,Pittsburgh Pit,219
+2020,12,Arizona Ari,179
+2020,12,Buffalo Buf,367
+2020,12,Atlanta Atl,243
+2020,12,Tennessee Ten,336
+2020,12,New Orleans NO,112
+2020,12,Indianapolis Ind,449
+2020,12,Las Vegas LV,304
+2020,12,Green Bay GB,351
+2020,12,Carolina Car,387
+2020,12,Washington Was,247
+2020,12,Houston Hou,388
+2020,12,New York NYJ,345
+2020,12,Los Angeles LAC,332
+2020,12,New England NE,298
+2020,12,Baltimore Bal,334
+2020,12,Denver Den,292
+2020,12,Philadelphia Phi,301
+2020,12,Dallas Dal,338
+2020,12,Jacksonville Jax,459
+2020,12,Detroit Det,384
+2020,12,Tampa Bay TB,543
+2020,12,Chicago Chi,393
+2020,13,Kansas City KC,330
+2020,13,Los Angeles LAR,232
+2020,13,Las Vegas LV,376
+2020,13,Chicago Chi,460
+2020,13,Tennessee Ten,458
+2020,13,Miami Mia,196
+2020,13,Washington Was,326
+2020,13,Green Bay GB,278
+2020,13,San Francisco SF,449
+2020,13,New Orleans NO,332
+2020,13,Minnesota Min,390
+2020,13,Seattle Sea,290
+2020,13,Buffalo Buf,402
+2020,13,Baltimore Bal,388
+2020,13,New York NYG,327
+2020,13,Pittsburgh Pit,318
+2020,13,Cincinnati Cin,406
+2020,13,Indianapolis Ind,398
+2020,13,New England NE,258
+2020,13,Jacksonville Jax,420
+2020,13,Detroit Det,389
+2020,13,Philadelphia Phi,437
+2020,13,Houston Hou,371
+2020,13,Cleveland Cle,431
+2020,13,New York NYJ,440
+2020,13,Atlanta Atl,424
+2020,13,Tampa Bay TB,NA
+2020,13,Carolina Car,NA
+2020,13,Los Angeles LAC,291
+2020,13,Arizona Ari,463
+2020,13,Denver Den,447
+2020,13,Dallas Dal,401
+2020,14,Los Angeles LAR,220
+2020,14,Cleveland Cle,385
+2020,14,Green Bay GB,293
+2020,14,Carolina Car,365
+2020,14,San Francisco SF,193
+2020,14,Pittsburgh Pit,334
+2020,14,Washington Was,344
+2020,14,Miami Mia,448
+2020,14,Houston Hou,410
+2020,14,Indianapolis Ind,424
+2020,14,Dallas Dal,309
+2020,14,Buffalo Buf,224
+2020,14,New Orleans NO,413
+2020,14,Seattle Sea,185
+2020,14,Tampa Bay TB,335
+2020,14,Baltimore Bal,493
+2020,14,Arizona Ari,159
+2020,14,Chicago Chi,263
+2020,14,Kansas City KC,367
+2020,14,Denver Den,370
+2020,14,Philadelphia Phi,358
+2020,14,Los Angeles LAC,319
+2020,14,Tennessee Ten,354
+2020,14,Cincinnati Cin,272
+2020,14,Atlanta Atl,345
+2020,14,New England NE,318
+2020,14,New York NYG,390
+2020,14,Minnesota Min,303
+2020,14,Jacksonville Jax,454
+2020,14,Detroit Det,410
+2020,14,New York NYJ,410
+2020,14,Las Vegas LV,456
+2020,15,Los Angeles LAR,289
+2020,15,Cleveland Cle,288
+2020,15,Miami Mia,303
+2020,15,Washington Was,302
+2020,15,Tennessee Ten,430
+2020,15,Buffalo Buf,255
+2020,15,Dallas Dal,458
+2020,15,San Francisco SF,291
+2020,15,Seattle Sea,353
+2020,15,Houston Hou,350
+2020,15,Green Bay GB,364
+2020,15,New England NE,383
+2020,15,Kansas City KC,285
+2020,15,Indianapolis Ind,425
+2020,15,Pittsburgh Pit,230
+2020,15,Baltimore Bal,267
+2020,15,Arizona Ari,422
+2020,15,Minnesota Min,397
+2020,15,New Orleans NO,411
+2020,15,Cincinnati Cin,244
+2020,15,New York NYJ,303
+2020,15,Carolina Car,291
+2020,15,Tampa Bay TB,369
+2020,15,New York NYG,392
+2020,15,Chicago Chi,407
+2020,15,Philadelphia Phi,526
+2020,15,Los Angeles LAC,449
+2020,15,Atlanta Atl,416
+2020,15,Las Vegas LV,402
+2020,15,Detroit Det,463
+2020,15,Jacksonville Jax,409
+2020,15,Denver Den,534
+2020,16,Cleveland Cle,333
+2020,16,Philadelphia Phi,513
+2020,16,Houston Hou,540
+2020,16,Los Angeles LAC,396
+2020,16,Arizona Ari,398
+2020,16,Miami Mia,418
+2020,16,Tampa Bay TB,186
+2020,16,Baltimore Bal,269
+2020,16,Chicago Chi,279
+2020,16,San Francisco SF,350
+2020,16,Indianapolis Ind,354
+2020,16,Buffalo Buf,201
+2020,16,Dallas Dal,477
+2020,16,Seattle Sea,334
+2020,16,Kansas City KC,367
+2020,16,New England NE,474
+2020,16,Denver Den,316
+2020,16,Green Bay GB,260
+2020,16,Washington Was,280
+2020,16,New Orleans NO,364
+2020,16,Carolina Car,386
+2020,16,New York NYJ,299
+2020,16,Pittsburgh Pit,365
+2020,16,Los Angeles LAR,292
+2020,16,Atlanta Atl,395
+2020,16,Las Vegas LV,383
+2020,16,Jacksonville Jax,391
+2020,16,Cincinnati Cin,488
+2020,16,New York NYG,432
+2020,16,Detroit Det,588
+2020,16,Tennessee Ten,448
+2020,16,Minnesota Min,583
+2020,17,Cleveland Cle,394
+2020,17,Philadelphia Phi,248
+2020,17,New England NE,350
+2020,17,Washington Was,216
+2020,17,Pittsburgh Pit,358
+2020,17,Tampa Bay TB,385
+2020,17,Los Angeles LAR,214
+2020,17,Kansas City KC,416
+2020,17,San Francisco SF,280
+2020,17,Chicago Chi,316
+2020,17,Green Bay GB,356
+2020,17,Dallas Dal,336
+2020,17,Buffalo Buf,454
+2020,17,Indianapolis Ind,283
+2020,17,Seattle Sea,328
+2020,17,Arizona Ari,333
+2020,17,Baltimore Bal,195
+2020,17,New Orleans NO,320
+2020,17,New York NYG,307
+2020,17,Los Angeles LAC,268
+2020,17,Denver Den,465
+2020,17,Las Vegas LV,446
+2020,17,Carolina Car,347
+2020,17,Tennessee Ten,457
+2020,17,New York NYJ,404
+2020,17,Miami Mia,455
+2020,17,Minnesota Min,417
+2020,17,Jacksonville Jax,437
+2020,17,Houston Hou,492
+2020,17,Atlanta Atl,485
+2020,17,Detroit Det,508
+2020,17,Cincinnati Cin,525

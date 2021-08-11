@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library("ffanalytics")
 library("here")
 library("readr")
+library("janitor")
 ```
 
 ```{r scoring_rules}
@@ -88,12 +89,44 @@ scrape <-
     season = 2021, 
     week = 0)
 
-write_rds(scrape, here::here("out", paste0("scrape-", Sys.Date(), ".Rds")))
+write_rds(scrape, 
+          here::here("out", paste0("scrape-", Sys.Date(), ".Rds")))
+```
+
+```{r dst_yardage_model}
+raw_defense_performance <- 
+  read_csv(here::here("in", "historicDefensePerformance.csv"))
+
+dst_yardage_points <-
+  raw_defense_performance %>% 
+    janitor::clean_names() %>% 
+    rename(yards = yards_allowed) %>% 
+    filter(!is.na(yards)) %>% 
+    mutate(points = case_when(
+      yards < 100 ~ 11.5,
+      yards < 200 ~ 9.5,
+      yards < 300 ~ 8.5,
+      yards < 400 ~ 6,
+      yards < 500 ~ 2.5,
+      TRUE ~ 0
+    )) %>% 
+    group_by(year, team) %>% 
+    summarize(weeks = n(),
+              yards = sum(yards),
+              points = sum(points),
+              points_per_week = points / weeks,
+              yards_per_week = yards / weeks)
+
+
+dst_yardage_model <-
+  lm(dst_yardage_points$yards_per_week ~ dst_yardage_points$points_per_week)
+
+#TODO points to add for each team's projections
+
 ```
 
 ```{r projections}
 #TODO evaluate projections_table.vor_baseline
-#TODO DST points by yards allowed
 
 projections <- 
   projections_table(scrape) %>% 
@@ -103,7 +136,24 @@ projections <-
   add_aav() %>% 
   add_player_info()
 
-#TODO convert to single row per player
+projections %>% 
+  select(id:position, avg_type:ceiling, tier:aav) %>% 
+  group_by(id, first_name, last_name, team, position) %>% 
+  summarize(points = mean(points) %>% round(),
+            sd_pts = mean(sd_pts) %>% round(),
+            tier = min(tier),
+            points_vor = mean(points_vor) %>% round(),
+            floor_vor = min(floor_vor) %>% round(),
+            ceiling_vor = max(ceiling_vor) %>% round(),
+            pos_ecr = min(pos_ecr) %>% round(),
+            sd_ecr = min(sd_ecr) %>% round(),
+            risk = mean(risk) %>% round(),
+            adp = min(adp) %>% round(),
+            aav = min(aav) %>% round()) %>% 
+  mutate()
+# additional DST points based on yardage allowed
+# recompute pos_rank and rank
 
-write_csv(projections, here::here("out", paste0("projections-", Sys.Date(), ".csv")))
+write_csv(projections, 
+          here::here("out", paste0("projections-", Sys.Date(), ".csv")))
 ```

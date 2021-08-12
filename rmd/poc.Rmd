@@ -70,7 +70,13 @@ scoring_rules <-
 
 ```{r scrape}
 
-scrape <- 
+scrape_file <- 
+  here::here("out", paste0("scrape-", Sys.Date(), ".Rds"))
+
+if (file.exists(scrape_file)) {
+  scrape <- readRDS(scrape_file)
+} else {
+  scrape <- 
   scrape_data(src = c(
     "CBS", 
     "ESPN", 
@@ -88,14 +94,18 @@ scrape <-
     pos = c("QB", "RB", "WR", "TE", "DST", "K"),
     season = 2021, 
     week = 0)
+  
+  write_rds(scrape, 
+            scrape_file)
+}
 
-write_rds(scrape, 
-          here::here("out", paste0("scrape-", Sys.Date(), ".Rds")))
+
 ```
 
 ```{r dst_yardage_model}
 raw_defense_performance <- 
-  read_csv(here::here("in", "historicDefensePerformance.csv"))
+  read_csv(here::here("in", "historicDefensePerformance.csv"),
+           show_col_types = FALSE)
 
 dst_yardage_points <-
   raw_defense_performance %>% 
@@ -116,19 +126,32 @@ dst_yardage_points <-
               points = sum(points),
               points_per_week = points / weeks,
               yards_per_week = yards / weeks)
+  
+model <- lm(points_per_week ~ yards_per_week,
+            data=dst_yardage_points)
 
+predicted_yards_per_game <- 
+  scrape$DST %>% 
+  mutate(id = if_else(
+    is.na(id) & startsWith(player, "Las Vegas"),
+    "0513", id)) %>% 
+  filter(!is.na(dst_yds_allowed)) %>% 
+  group_by(id) %>% 
+  summarize(yards_per_week = mean(dst_yds_allowed) / 17)
 
-dst_yardage_model <-
-  lm(dst_yardage_points$yards_per_week ~ dst_yardage_points$points_per_week)
+predicted_yards_per_game$points_per_week <- 
+  predict(model, predicted_yards_per_game)
 
-#TODO points to add for each team's projections
-
+predicted_yards_per_game <-
+  predicted_yards_per_game %>% 
+  mutate(additional_points = (points_per_week * 17) %>% round()) %>% 
+  select(id, additional_points)
 ```
 
 ```{r projections}
 #TODO evaluate projections_table.vor_baseline
 
-projections <- 
+projections_table <- 
   projections_table(scrape) %>% 
   add_ecr() %>% 
   add_risk() %>%
@@ -136,7 +159,8 @@ projections <-
   add_aav() %>% 
   add_player_info()
 
-projections %>% 
+projections <-
+  projections_table %>% 
   select(id:position, avg_type:ceiling, tier:aav) %>% 
   group_by(id, first_name, last_name, team, position) %>% 
   summarize(points = mean(points) %>% round(),
@@ -145,14 +169,21 @@ projections %>%
             points_vor = mean(points_vor) %>% round(),
             floor_vor = min(floor_vor) %>% round(),
             ceiling_vor = max(ceiling_vor) %>% round(),
-            pos_ecr = min(pos_ecr) %>% round(),
-            sd_ecr = min(sd_ecr) %>% round(),
+            pos_ecr = mean(pos_ecr) %>% round(),
+            sd_ecr = mean(sd_ecr) %>% round(),
             risk = mean(risk) %>% round(),
-            adp = min(adp) %>% round(),
-            aav = min(aav) %>% round()) %>% 
-  mutate()
-# additional DST points based on yardage allowed
-# recompute pos_rank and rank
+            adp = mean(adp) %>% round(),
+            aav = mean(aav) %>% round()) %>% 
+  left_join(predicted_yards_per_game, by = "id") %>%
+  rename(points_adjustment = additional_points) %>% 
+  mutate(
+    points_adjustment = if_else(
+      is.na(points_adjustment), 
+      0, points_adjustment),
+    points = if_else(
+      is.na(points_adjustment), points,
+      points + points_adjustment))
+#TODO recompute pos_rank and rank
 
 write_csv(projections, 
           here::here("out", paste0("projections-", Sys.Date(), ".csv")))

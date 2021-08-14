@@ -176,14 +176,19 @@ projections <-
             aav = mean(aav) %>% round()) %>% 
   left_join(predicted_yards_per_game, by = "id") %>%
   rename(points_adjustment = additional_points) %>% 
+  group_by(position) %>% 
   mutate(
     points_adjustment = if_else(
       is.na(points_adjustment), 
       0, points_adjustment),
     points = if_else(
       is.na(points_adjustment), points,
-      points + points_adjustment))
-#TODO recompute pos_rank and rank
+      points + points_adjustment),
+    pos_rank = rank(-points, ties.method="min")) %>% 
+  ungroup() %>% 
+  mutate(rank = rank(-points, ties.method="min"))
+
+# tiers are across positions - DST tiers will be off but we won't be using tiers in DST anyway
 
 write_csv(projections, 
           here::here("out", paste0("projections-", Sys.Date(), ".csv")))

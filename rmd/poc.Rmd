@@ -15,6 +15,10 @@ library("readr")
 library("janitor")
 ```
 
+```{r constants}
+regular_season_games <- 17
+```
+
 ```{r scoring_rules}
 
 scoring_rules <- 
@@ -137,30 +141,45 @@ predicted_yards_per_game <-
     "0513", id)) %>% 
   filter(!is.na(dst_yds_allowed)) %>% 
   group_by(id) %>% 
-  summarize(yards_per_week = mean(dst_yds_allowed) / 17)
+  summarize(yards_per_week = mean(dst_yds_allowed) / regular_season_games)
 
 predicted_yards_per_game$points_per_week <- 
   predict(model, predicted_yards_per_game)
 
 predicted_yards_per_game <-
   predicted_yards_per_game %>% 
-  mutate(additional_points = (points_per_week * 17) %>% round()) %>% 
+  mutate(additional_points = (points_per_week * regular_season_games) %>% round()) %>% 
   select(id, additional_points)
 ```
 
+```{r projection_table}
+projections_table_file <- 
+  here::here("out", paste0("projections_table-", Sys.Date(), ".Rds"))
+
+if (file.exists(projections_table_file)) {
+  projections_table <- readRDS(projections_table_file)
+} else {
+  projections_table <- 
+    projections_table(scrape) %>% 
+    add_ecr() %>% 
+    add_risk() %>%
+    add_adp() %>% 
+    add_aav() %>% 
+    add_player_info()
+  
+  write_rds(projections_table, 
+            projections_table_file)
+}
+```
+
 ```{r projections}
+source(here::here("R", "vorp.R"))
+
 #TODO evaluate projections_table.vor_baseline
 
-projections_table <- 
-  projections_table(scrape) %>% 
-  add_ecr() %>% 
-  add_risk() %>%
-  add_adp() %>% 
-  add_aav() %>% 
-  add_player_info()
-
 projections <-
-  projections_table %>% 
+  projections_table %>%
+  filter(position != 'LB') %>% 
   select(id:position, avg_type:ceiling, tier:aav) %>% 
   group_by(id, first_name, last_name, team, position) %>% 
   summarize(points = mean(points) %>% round(),
@@ -186,9 +205,19 @@ projections <-
       points + points_adjustment),
     pos_rank = rank(-points, ties.method="min")) %>% 
   ungroup() %>% 
-  mutate(rank = rank(-points, ties.method="min"))
+  mutate(rank = rank(-points, ties.method="min"),
+         points_per_game = (points / regular_season_games) %>% round(1),
+         flex = if_else(position %in% c('RB','WR','TE'), TRUE, FALSE)) %>% 
+  group_by(flex) %>% 
+  mutate(flex_rank = rank(-points, ties.method="min")) %>% 
+  ungroup() %>% 
+  mutate(flex_rank = ifelse(flex, flex_rank, NA))
 
-# tiers are across positions - DST tiers will be off but we won't be using tiers in DST anyway
+projections <- 
+  vorp_auction(projections) %>% 
+  select(id:sd_pts, points_per_game, tier, pos_tier, pos_ecr:rank, flex_rank:max_bid)
+
+#TODO review tiers
 
 write_csv(projections, 
           here::here("out", paste0("projections-", Sys.Date(), ".csv")))

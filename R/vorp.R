@@ -6,7 +6,6 @@ source(here::here("R", "tiers.R"))
 vorp_auction <- function(projections, 
                          target_points_week = 120,
                          budget = 200) {
-  
   qb <-
     projections %>% 
     filter(position == 'QB', !is.na(points)) %>% 
@@ -111,7 +110,7 @@ vorp_auction <- function(projections,
   rb <-
     rb %>%
     mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['QB'],
+           vorp = points_per_game - replacements['RB1'],
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
@@ -120,7 +119,7 @@ vorp_auction <- function(projections,
   wr <-
     wr %>% 
     mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['WR'],
+           vorp = points_per_game - replacements['WR1'],
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
@@ -147,7 +146,7 @@ vorp_auction <- function(projections,
   k <-
     k %>% 
     mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['K'],
+           vorp = (points_per_game - replacements['K']) %>% round(1),
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 

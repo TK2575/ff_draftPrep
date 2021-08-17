@@ -1,0 +1,70 @@
+---
+title: "2020 Draft Analysis"
+author: "Tom Kain"
+date: "8/16/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(readr)
+library(dplyr)
+library(janitor)
+library(ggplot2)
+```
+
+
+```{r import}
+draft_results <- 
+  read_csv(here::here("in", "draftResults_2020.csv"),
+           show_col_types = FALSE) %>% 
+  janitor::clean_names()
+
+projection_files <-
+  list.files(here::here("in/2020_projections"),
+             pattern="*.csv",
+             full.names=TRUE)
+
+projections <- 
+  lapply(projection_files, 
+         read_csv, 
+         show_col_types = FALSE) %>% 
+  bind_rows() %>% 
+  janitor::clean_names()
+
+projections_2021 <-
+  read_csv(here::here("out", "projections-latest.csv"),
+           show_col_types = FALSE)
+```
+
+```{r}
+
+# position, price, projection/actual
+projection_view <-
+  projections %>% 
+  select(position, max_bid) %>% 
+  rename(price = max_bid) %>% 
+  mutate(type = "projected (2020)")
+
+projection_view <-
+  projections_2021 %>% 
+  select(position, max_bid) %>% 
+  rename(price = max_bid) %>% 
+  mutate(type = "projected (2021)",
+         position = if_else(position == "DST", "DEF", position)) %>% 
+  bind_rows(projection_view)
+
+draft_results %>% 
+  select(position, salary) %>% 
+  rename(price = salary) %>% 
+  mutate(type = 'actual (2020)') %>% 
+  bind_rows(projection_view) %>% 
+  ggplot(aes(x=price,fill=type,color=type)) +
+  geom_boxplot()  +
+  theme(axis.text.y = element_blank(),
+        axis.ticks = element_blank()) +
+  facet_wrap(. ~ position)
+```

@@ -23,6 +23,7 @@ source(here::here("R", "vorp.R"))
 #TODO identify sleepers/penny stocks
 
 regular_season_games <- 17
+budget <- 209
 target_points_week <- 130 #average winning score in 2019
 ```
 
@@ -153,7 +154,8 @@ projections <-
 
 projections <- 
   vorp_auction(projections, 
-               target_points_week = target_points_week) %>% 
+               target_points_week = target_points_week,
+               budget = budget) %>% 
   select(id:sd_pts, 
          points_per_game, 
          tier, 
@@ -163,4 +165,7 @@ projections <-
 
 write_csv(projections, 
           here::here("out", paste0("projections-", Sys.Date(), ".csv")))
+
+write_csv(projections, 
+          here::here("out", "projections-latest.csv"))
 ```

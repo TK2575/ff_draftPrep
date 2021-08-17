@@ -18,8 +18,6 @@ source(here::here("R", "vorp.R"))
 ```
 
 ```{r constants}
-#TODO evaluate projections_table.vor_baseline
-#TODO review tier results
 #TODO identify sleepers/penny stocks
 
 regular_season_games <- 17

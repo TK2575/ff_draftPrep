@@ -105,7 +105,7 @@ vorp_auction <- function(projections,
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(qb$points,6)) 
+    add_column(pos_tier = tiers(qb$points,9)) 
   
   rb <-
     rb %>%
@@ -114,7 +114,7 @@ vorp_auction <- function(projections,
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(rb$points,12))
+    add_column(pos_tier = tiers(rb$points,20))
   
   wr <-
     wr %>% 
@@ -123,7 +123,7 @@ vorp_auction <- function(projections,
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(wr$points,12))
+    add_column(pos_tier = tiers(wr$points,20))
   
   te <-
     te %>% 
@@ -141,7 +141,7 @@ vorp_auction <- function(projections,
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(dst$points,4))
+    add_column(pos_tier = tiers(dst$points,3))
   
   k <-
     k %>% 
@@ -150,7 +150,7 @@ vorp_auction <- function(projections,
            dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
            max_bid = ceiling(vorp * dollar_per_vorp_target),
            max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(k$points,3))
+    add_column(pos_tier = tiers(k$points,6))
   
   bind_rows(qb, rb, wr, te, dst, k)
 }

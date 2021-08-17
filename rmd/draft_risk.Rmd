@@ -1,0 +1,43 @@
+---
+title: "Projection Risk"
+author: "Tom Kain"
+date: "8/17/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(here)
+```
+
+```{r import}
+projections <- 
+  read_csv(here::here("out/latest", "projections-latest.csv"),
+           show_col_types = FALSE) %>% 
+  filter(!is.na(risk))
+```
+
+
+```{r risk_distribution}
+projections %>% 
+  group_by(position) %>% 
+  summarize(risk_median = median(risk),
+            risk_sd = sd(risk))
+  
+ggplot(projections, aes(x=risk)) +
+  geom_density() +
+  facet_wrap(position ~ .)
+```
+
+```{r max_bid_distribution}
+projections %>% 
+  filter(position %in% c("K","DST")) %>% 
+  ggplot(aes(x=max_bid)) +
+  geom_density() +
+  facet_wrap(position ~ .)
+```

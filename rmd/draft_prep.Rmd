@@ -167,5 +167,5 @@ write_csv(projections,
           here::here("out", paste0("projections-", Sys.Date(), ".csv")))
 
 write_csv(projections, 
-          here::here("out", "projections-latest.csv"))
+          here::here("out/latest", "projections-latest.csv"))
 ```

@@ -19,10 +19,14 @@ source(here::here("R", "vorp.R"))
 
 ```{r constants}
 #TODO identify sleepers/penny stocks
+#TODO add parameter/valve to adjust dollar_per_vorp_target
+#TODO get yahoo predraft values for max bid comparison
+#TODO identify early easy opponent defenses
 
 regular_season_games <- 17
 budget <- 209
 target_points_week <- 130 #average winning score in 2019
+dollar_vorp_target_override <- NULL
 ```
 
 ```{r scrape}
@@ -43,6 +47,8 @@ if (file.exists(scrape_file)) {
   
   write_rds(scrape, 
             scrape_file)
+  
+  write_rds(scrape, here::here("out/latest", "scrape-latest.Rds"))
 }
 ```
 
@@ -110,6 +116,8 @@ if (file.exists(projections_table_file)) {
   
   write_rds(projections_table, 
             projections_table_file)
+  
+  write_rds(projections_table, here::here("out/latest", "projections_table-latest.Rds"))
 }
 ```
 
@@ -153,7 +161,8 @@ projections <-
 projections <- 
   vorp_auction(projections, 
                target_points_week = target_points_week,
-               budget = budget) %>% 
+               budget = budget,
+               dollar_vorp_target_override = dollar_vorp_target_override) %>% 
   select(id:sd_pts, 
          points_per_game, 
          tier, 

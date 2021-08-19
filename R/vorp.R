@@ -5,7 +5,8 @@ source(here::here("R", "tiers.R"))
 
 vorp_auction <- function(projections, 
                          target_points_week = 120,
-                         budget = 200) {
+                         budget = 200,
+                         dollar_vorp_target_override = NULL) {
   qb <-
     projections %>% 
     filter(position == 'QB', !is.na(points)) %>% 
@@ -89,9 +90,14 @@ vorp_auction <- function(projections,
   target_team_vorp <- 
     target_points_week - replacement_team_points_weekly
   
-  dollar_per_vorp_target <- 
-    (budget / target_team_vorp) %>% 
-    round()
+  if (is.null(dollar_vorp_target_override) || !is.numeric(dollar_vorp_target_override)) {
+    dollar_per_vorp_target <- 
+      (budget / target_team_vorp) %>% 
+      round()  
+  } else {
+    dollar_per_vorp_target <- dollar_vorp_target_override
+  }
+  
   
   replacements <-
     roster_values %>% 

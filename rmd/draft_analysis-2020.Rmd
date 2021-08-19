@@ -36,7 +36,7 @@ projections <-
   janitor::clean_names()
 
 projections_2021 <-
-  read_csv(here::here("out", "projections-latest.csv"),
+  read_csv(here::here("out/latest", "projections-latest.csv"),
            show_col_types = FALSE)
 ```
 

@@ -20,9 +20,7 @@ source(here::here("R", "scrape_yahoo_predraft_rankings.R"))
 
 ```{r constants}
 #TODO identify sleepers/penny stocks
-#TODO add parameter/valve to adjust dollar_per_vorp_target
 #TODO identify early easy opponent defenses
-#FIXME yahoo av DST join not working (full name doesn't align)
 
 regular_season_games <- 17
 budget <- 209
@@ -177,11 +175,8 @@ projections <-
   group_by(flex) %>% 
   mutate(flex_rank = rank(-points, ties.method="min")) %>% 
   ungroup() %>% 
-  mutate(flex_rank = ifelse(flex, flex_rank, NA))
-
-projections <- 
-  vorp_auction(projections, 
-               target_points_week = target_points_week,
+  mutate(flex_rank = ifelse(flex, flex_rank, NA)) %>% 
+  vorp_auction(target_points_week = target_points_week,
                budget = budget,
                dollar_vorp_target_override = dollar_vorp_target_override) %>% 
   select(id:sd_pts, 
@@ -190,7 +185,9 @@ projections <-
          pos_tier, 
          pos_ecr:rank, 
          flex_rank:max_bid) %>% 
-  mutate(full_name = paste0(first_name, " ", last_name)) %>% 
+  mutate(full_name = if_else(position == 'DST',
+                             first_name,
+                             paste0(first_name, " ", last_name))) %>% 
   left_join(yahoo_av, by = c("full_name" = "player", "position" = "position")) %>% 
   select(-full_name)
 

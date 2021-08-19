@@ -58,5 +58,6 @@ html_page_to_table <- function(raw_html) {
     mutate(player = player %>% v_cln_plyr(),
            position = player %>% v_ext_pos(),
            player = player %>% v_trim_plyr(),
-           across(league_value:avg_salary, ~gsub("\\$", "", .) %>% as.numeric))
+           across(league_value:avg_salary, ~gsub("\\$", "", .) %>% as.numeric)) %>% 
+    filter(!is.na(player))
 }

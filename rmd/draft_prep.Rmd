@@ -15,13 +15,14 @@ library("readr")
 library("janitor")
 source(here::here("R", "scoring_rules.R"))
 source(here::here("R", "vorp.R"))
+source(here::here("R", "scrape_yahoo_predraft_rankings.R"))
 ```
 
 ```{r constants}
 #TODO identify sleepers/penny stocks
 #TODO add parameter/valve to adjust dollar_per_vorp_target
-#TODO get yahoo predraft values for max bid comparison
 #TODO identify early easy opponent defenses
+#FIXME yahoo av DST join not working (full name doesn't align)
 
 regular_season_games <- 17
 budget <- 209
@@ -29,7 +30,7 @@ target_points_week <- 130 #average winning score in 2019
 dollar_vorp_target_override <- NULL
 ```
 
-```{r scrape}
+```{r scrape_projections}
 scrape_file <- 
   here::here("out", paste0("scrape-", Sys.Date(), ".Rds"))
 
@@ -48,7 +49,26 @@ if (file.exists(scrape_file)) {
   write_rds(scrape, 
             scrape_file)
   
-  write_rds(scrape, here::here("out/latest", "scrape-latest.Rds"))
+  write_rds(scrape, 
+            here::here("out/latest", "scrape-latest.Rds"))
+}
+```
+
+```{r scrape_yahoo_auction_values}
+
+yahoo_av_file <-
+  here::here("out", paste0("yahoo-av-", Sys.Date(), ".csv"))
+
+if (file.exists(yahoo_av_file)) {
+  yahoo_av <- 
+    read_csv(yahoo_av_file, show_col_types = FALSE)
+} else {
+  yahoo_av <- 
+    scrape_predraft_ranking_pages() %>% 
+    mutate(position = if_else(position == "DEF","DST",position))
+  
+  write_csv(yahoo_av, yahoo_av_file)
+  write_csv(yahoo_av, here::here("out/latest", "yahoo-av-latest.csv"))
 }
 ```
 
@@ -117,7 +137,8 @@ if (file.exists(projections_table_file)) {
   write_rds(projections_table, 
             projections_table_file)
   
-  write_rds(projections_table, here::here("out/latest", "projections_table-latest.Rds"))
+  write_rds(projections_table, 
+            here::here("out/latest", "projections_table-latest.Rds"))
 }
 ```
 
@@ -168,7 +189,11 @@ projections <-
          tier, 
          pos_tier, 
          pos_ecr:rank, 
-         flex_rank:max_bid)
+         flex_rank:max_bid) %>% 
+  mutate(full_name = paste0(first_name, " ", last_name)) %>% 
+  left_join(yahoo_av, by = c("full_name" = "player", "position" = "position")) %>% 
+  select(-full_name)
+
 
 write_csv(projections, 
           here::here("out", paste0("projections-", Sys.Date(), ".csv")))

@@ -61,14 +61,18 @@ vorp_auction <- function(projections,
   )
   
   flex_replacement <-
-    flex$points_per_game %>% nth(71)
+    max(
+      rb$points_per_game %>% nth(31),
+      wr$points_per_game %>% nth(31),  
+      te$points_per_game %>% nth(16)
+    )
   
   replacement_values <- c(
     qb$points_per_game %>% nth(15),
-    flex_replacement,
-    flex_replacement,
-    flex_replacement,
-    flex_replacement,
+    rb$points_per_game %>% nth(29),
+    rb$points_per_game %>% nth(30),
+    wr$points_per_game %>% nth(29),
+    wr$points_per_game %>% nth(30),
     te$points_per_game %>% nth(15),
     flex_replacement,
     dst$points_per_game %>% nth(15),

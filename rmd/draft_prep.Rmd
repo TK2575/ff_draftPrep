@@ -19,13 +19,20 @@ source(here::here("R", "scrape_yahoo_predraft_rankings.R"))
 ```
 
 ```{r constants}
-#TODO identify sleepers/penny stocks
+#TODO fix "jr" based name join misses?
+#TODO why is LA Rams DST on here twice?
+
 #TODO identify early easy opponent defenses
+#TODO identify sleepers/penny stocks
+
+# Next year
+#add way to export best/replacement values by position
+#any takeaways from prior year's week-to-week points deviation/variance?
 
 regular_season_games <- 17
 budget <- 209
 target_points_week <- 130 #average winning score in 2019
-dollar_vorp_target_override <- NULL
+dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed replacement values from 2019)
 ```
 
 ```{r scrape_projections}

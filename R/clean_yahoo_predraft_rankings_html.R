@@ -17,24 +17,40 @@ html_page_to_table <- function(raw_html) {
   
   v_ext_pos <- Vectorize(extract_pos)
   
-  trim_plyr <- function(char) {
+  trim_pos <- function(char) {
     k <- str_locate_all(pattern = '-', char) %>%
       unlist()
     
-    str <-
-      char %>%
+    char %>%
       substr(0,max(k)-1) %>%
-      str_trim()
-    
-    l <- str_locate_all(pattern = " ", str) %>% 
-      unlist()
-    
-    str %>% 
-      substr(0, max(l)) %>% 
       str_trim()
   }
   
-  v_trim_plyr <- Vectorize(trim_plyr)
+  v_trim_pos <- Vectorize(trim_pos)
+  
+  ext_team <- function(char) {
+    l <- str_locate_all(pattern = " ", char) %>% 
+      unlist()
+    
+    char %>% 
+      substr(max(l)+1,nchar(char)) %>%
+      str_trim() %>% 
+      toupper()
+      
+  }
+  
+  v_ext_team <- Vectorize(ext_team)
+  
+  trim_team <- function(char) {
+    m <- str_locate_all(pattern = " ", char) %>% 
+      unlist()
+    
+    char %>% 
+      substr(0, max(m)) %>% 
+      str_trim()
+  }
+  
+  v_trim_team <- Vectorize(trim_team)
   
   clean_plyr <- function(char) {
     i <- str_locate_all(pattern = '\\n', char) %>%
@@ -57,7 +73,9 @@ html_page_to_table <- function(raw_html) {
     select(player, league_value:avg_salary) %>% 
     mutate(player = player %>% v_cln_plyr(),
            position = player %>% v_ext_pos(),
-           player = player %>% v_trim_plyr(),
+           player = player %>% v_trim_pos(),
+           team = player %>% v_ext_team(),
+           player = player %>% v_trim_team(),
            across(league_value:avg_salary, ~gsub("\\$", "", .) %>% as.numeric)) %>% 
     filter(!is.na(player))
 }

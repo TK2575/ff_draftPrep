@@ -44,7 +44,7 @@ scrape_predraft_ranking_pages <- function() {
     
     rd$navigate(url)
     rd$getPageSource()[[1]][1] %>% 
-      html_page_to_table()
+      predraft_rankings_html_to_table()
   }
   
   rd <- open_session()

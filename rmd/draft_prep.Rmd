@@ -9,13 +9,7 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library("ffanalytics")
-library("here")
-library("readr")
-library("janitor")
-source(here::here("R", "scoring_rules.R"))
-source(here::here("R", "vorp.R"))
-source(here::here("R", "scrape_yahoo_predraft_rankings.R"))
+source(here::here("_libraries.R"))
 ```
 
 ```{r constants}

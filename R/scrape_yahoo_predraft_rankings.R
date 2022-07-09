@@ -1,12 +1,3 @@
-library("here")
-library("config")
-library("xml2")
-library("rvest")
-library("purrr")
-library("RSelenium")
-library("dplyr")
-source(here::here("R", "clean_yahoo_predraft_rankings_html.R"))
-
 scrape_predraft_ranking_pages <- function() {
   url_base <- "https://football.fantasysports.yahoo.com/f1/41236/"
   

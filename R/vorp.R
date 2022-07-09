@@ -1,8 +1,3 @@
-library(here)
-library(dplyr)
-library(tibble)
-source(here::here("R", "tiers.R"))
-
 vorp_auction <- function(projections, 
                          target_points_week = 120,
                          budget = 200,

@@ -1,6 +1,3 @@
-library("dplyr")
-library("stringr")
-
 extract_pos <- function(char) {
   j <- str_locate_all(pattern = '-', char) %>%
     unlist()

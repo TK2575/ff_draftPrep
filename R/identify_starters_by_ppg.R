@@ -1,8 +1,3 @@
-library("here")
-library("janitor")
-library("dplyr")
-library("stringr")
-
 identify_starters_by_ppg <- function(rosters) {
   single_slots <-
     rosters %>% 

@@ -9,10 +9,7 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library("here")
-library("dplyr")
-library("readr")
-library("ggplot2")
+source(here::here("_libraries.R"))
 ```
 
 ```{r import}

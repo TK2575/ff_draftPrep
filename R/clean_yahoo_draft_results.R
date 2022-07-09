@@ -1,9 +1,3 @@
-library("dplyr")
-library("xml2")
-library("rvest")
-library("janitor")
-source(here::here("R", "clean_yahoo_utils.R"))
-  
 draft_results_html_to_table <- function(raw_html) {
   raw_html %>% 
     read_html() %>% 

@@ -9,15 +9,7 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library("here")
-library("dplyr")
-library("xml2")
-library("rvest")
-library("janitor")
-library("readr")
-
-source(here::here("R", "clean_yahoo_draft_results.R"))
-source(here::here("R", "identify_starters_by_ppg.R"))
+source(here::here("_libraries.R"))
 ```
 
 ```{r import_export}

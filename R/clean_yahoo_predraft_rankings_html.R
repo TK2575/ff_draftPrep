@@ -1,11 +1,3 @@
-library("here")
-library("dplyr")
-library("xml2")
-library("rvest")
-library("janitor")
-library("stringr")
-source(here::here("R", "clean_yahoo_utils.R"))
-
 predraft_rankings_html_to_table <- function(raw_html) {
   raw_html %>% 
     read_html() %>% 

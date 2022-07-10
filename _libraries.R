@@ -1,3 +1,5 @@
+# Assumes use of docker containers setup in sh/docker_init.sh
+
 cran_list <- c("magrittr",
                "tibble",
                "here",

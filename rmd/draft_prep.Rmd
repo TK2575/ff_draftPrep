@@ -1,5 +1,5 @@
 ---
-title: "2021 Fantasy Football Draft Prep"
+title: "Fantasy Football Draft Prep"
 author: "Tom Kain"
 date: "8/10/2021"
 output: html_document
@@ -9,26 +9,33 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-source(here::here("_libraries.R"))
+source(paste(getwd(), "_libraries.R", sep = "/"))
 ```
 
 ```{r constants}
 #TODO identify early easy opponent defenses
 #TODO identify sleepers/penny stocks
+#TODO any other uses of here::here("in")
 
 # Next year
 #add way to export best/replacement values by position
 #any takeaways from prior year's week-to-week points deviation/variance?
 
+season <- 2022
 regular_season_games <- 17
-budget <- 209
+budget <- 200
 target_points_week <- 130 #average winning score in 2019
 dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed replacement values from 2019)
+
+out <- here::here("out")
+latest <- here::here(out, "latest")
 ```
 
 ```{r scrape_projections}
+dir.create(out, showWarnings = FALSE)
+
 scrape_file <- 
-  here::here("out", paste0("scrape-", Sys.Date(), ".Rds"))
+  here::here(out, paste0("scrape-", Sys.Date(), ".Rds"))
 
 if (file.exists(scrape_file)) {
   scrape <- readRDS(scrape_file)
@@ -39,21 +46,21 @@ if (file.exists(scrape_file)) {
       "FFToday", "FantasySharks", "FantasyFootballNerd", 
       "Walterfootball", "RTSports", "FantasyData", "Fleaflicker"), 
       pos = c("QB", "RB", "WR", "TE", "DST", "K"),
-      season = 2021, 
+      season = season, 
       week = 0)
   
   write_rds(scrape, 
             scrape_file)
   
   write_rds(scrape, 
-            here::here("out/latest", "scrape-latest.Rds"))
+            here::here(latest, "scrape-latest.Rds"))
 }
 ```
 
 ```{r scrape_yahoo_auction_values}
 
 yahoo_av_file <-
-  here::here("out", paste0("yahoo-av-", Sys.Date(), ".csv"))
+  here::here(out, paste0("yahoo-av-", Sys.Date(), ".csv"))
 
 if (file.exists(yahoo_av_file)) {
   yahoo_av <- 
@@ -76,7 +83,7 @@ if (file.exists(yahoo_av_file)) {
            player = gsub(" II", "", player))
   
   write_csv(yahoo_av, yahoo_av_file)
-  write_csv(yahoo_av, here::here("out/latest", "yahoo-av-latest.csv"))
+  write_csv(yahoo_av, here::here(latest, "yahoo-av-latest.csv"))
 }
 ```
 
@@ -128,7 +135,7 @@ predicted_yards_per_game <-
 
 ```{r projection_table}
 projections_table_file <- 
-  here::here("out", paste0("projections_table-", Sys.Date(), ".Rds"))
+  here::here(out, paste0("projections_table-", Sys.Date(), ".Rds"))
 
 if (file.exists(projections_table_file)) {
   projections_table <- readRDS(projections_table_file)
@@ -146,7 +153,7 @@ if (file.exists(projections_table_file)) {
             projections_table_file)
   
   write_rds(projections_table, 
-            here::here("out/latest", "projections_table-latest.Rds"))
+            here::here(latest, "projections_table-latest.Rds"))
 }
 ```
 
@@ -203,8 +210,8 @@ projections <-
   select(-full_name)
 
 write_csv(projections, 
-          here::here("out", paste0("projections-", Sys.Date(), ".csv")))
+          here::here(out, paste0("projections-", Sys.Date(), ".csv")))
 
 write_csv(projections, 
-          here::here("out/latest", "projections-latest.csv"))
+          here::here(latest, "projections-latest.csv"))
 ```

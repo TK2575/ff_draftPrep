@@ -9,7 +9,7 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-source(here::here("_libraries.R"))
+source(paste(getwd(), "_libraries.R", sep = "/"))
 ```
 
 ```{r import}

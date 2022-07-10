@@ -29,5 +29,10 @@ if (!("ffanalytics" %in% installed.packages())) {
 library_list <- c(cran_list, "ffanalytics")
 lapply(library_list, require, character.only = TRUE)
 
-# source each file in the R directory
-sapply(list.files(here::here("R"), full.names = TRUE), source)
+missing_list <- library_list[!(library_list %in% .packages(TRUE))]
+if (length(missing_list)) {
+  stop(paste0("The following packages were not loaded: "), (paste(missing_list, collapse=", ")))
+} else {
+  # source each file in the R directory
+  sapply(list.files(here::here("R"), full.names = TRUE), source) 
+}

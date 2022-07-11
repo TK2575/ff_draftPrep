@@ -32,8 +32,6 @@ latest <- here::here(out, "latest")
 ```
 
 ```{r scrape_projections}
-dir.create(out, showWarnings = FALSE)
-
 scrape_file <- 
   here::here(out, paste0("scrape-", Sys.Date(), ".Rds"))
 

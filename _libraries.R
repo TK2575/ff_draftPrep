@@ -35,4 +35,7 @@ if (length(missing_list)) {
 } else {
   # source each file in the R directory
   sapply(list.files(here::here("R"), full.names = TRUE), source) 
+  
+  dir.create(here::here("out/"), showWarnings = FALSE)
+  dir.create(here::here("out/latest/"), showWarnings = FALSE)
 }

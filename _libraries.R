@@ -14,7 +14,8 @@ cran_list <- c("magrittr",
                "stringr",
                "purrr",
                "RSelenium",
-               "tibble")
+               "tibble",
+               "nflfastR")
 
 install_list <- cran_list[!(cran_list %in% installed.packages())]
 if (length(install_list)) {

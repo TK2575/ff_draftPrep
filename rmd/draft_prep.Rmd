@@ -86,29 +86,49 @@ if (file.exists(yahoo_av_file)) {
 ```
 
 ```{r dst_yardage_model}
-raw_defense_performance <- 
-  read_csv(here::here("in", "historicDefensePerformance.csv"),
-           show_col_types = FALSE)
+def_perf_file <-
+  here::here(out, paste0("def_perf_file-", season, ".csv"))
+
+if (file.exists(def_perf_file)) {
+  def_perf <- 
+    read_csv(yahoo_av_file, show_col_types = FALSE)
+} else {
+  pbp <- nflfastR::load_pbp(c(season-6):(season-1))
+
+  def_perf <-
+    pbp %>% 
+    filter(!is.na(yards_gained)) %>% 
+    filter(!is.na(defteam)) %>% 
+    group_by(defteam, game_id, week, game_date) %>% 
+    summarize(yards_allowed = sum(yards_gained)) %>% 
+    arrange(game_date, game_id)
+  
+  rm(pbp)
+  nflreadr::.clear_cache()
+  
+  write_csv(def_perf, def_perf_file)
+  write_csv(def_perf, here::here(latest, "def-perf-latest.csv"))
+}
 
 dst_yardage_points <-
-  raw_defense_performance %>% 
-    janitor::clean_names() %>% 
-    rename(yards = yards_allowed) %>% 
-    filter(!is.na(yards)) %>% 
-    mutate(points = case_when(
-      yards < 100 ~ 11.5,
-      yards < 200 ~ 9.5,
-      yards < 300 ~ 8.5,
-      yards < 400 ~ 6,
-      yards < 500 ~ 2.5,
-      TRUE ~ 0
-    )) %>% 
-    group_by(year, team) %>% 
-    summarize(weeks = n(),
-              yards = sum(yards),
-              points = sum(points),
-              points_per_week = points / weeks,
-              yards_per_week = yards / weeks)
+  def_perf %>%
+  rename(yards = yards_allowed,
+         team = defteam) %>% 
+  filter(!is.na(yards)) %>% 
+  mutate(year = substr(game_date, 0, 4)) %>% 
+  mutate(points = case_when(
+    yards < 100 ~ 11.5,
+    yards < 200 ~ 9.5,
+    yards < 300 ~ 8.5,
+    yards < 400 ~ 6,
+    yards < 500 ~ 2.5,
+    TRUE ~ 0)) %>% 
+  group_by(year, team) %>% 
+  summarize(weeks = n(),
+            yards = sum(yards),
+            points = sum(points),
+            points_per_week = points / weeks,
+            yards_per_week = yards / weeks)
   
 model <- lm(points_per_week ~ yards_per_week,
             data=dst_yardage_points)

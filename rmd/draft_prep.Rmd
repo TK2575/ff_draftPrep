@@ -91,7 +91,7 @@ def_perf_file <-
 
 if (file.exists(def_perf_file)) {
   def_perf <- 
-    read_csv(yahoo_av_file, show_col_types = FALSE)
+    read_csv(def_perf_file, show_col_types = FALSE)
 } else {
   pbp <- nflfastR::load_pbp(c(season-6):(season-1))
 

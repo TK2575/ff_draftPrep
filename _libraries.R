@@ -15,7 +15,8 @@ cran_list <- c("magrittr",
                "purrr",
                "RSelenium",
                "tibble",
-               "nflfastR")
+               "nflfastR",
+               "googlesheets4")
 
 install_list <- cran_list[!(cran_list %in% installed.packages())]
 if (length(install_list)) {

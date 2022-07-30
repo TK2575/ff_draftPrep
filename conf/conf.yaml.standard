@@ -1,0 +1,12 @@
+default:
+  network:
+    ipaddress: 0.0.0.0
+  
+  yahoo:
+    username: 
+    password: 
+    league_id:
+    team_id:
+    
+  google:
+    gsheet_url: 

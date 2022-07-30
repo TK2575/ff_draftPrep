@@ -29,6 +29,9 @@ dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed repl
 
 out <- here::here("out")
 latest <- here::here(out, "latest")
+
+google_sheet_url <- 
+  config::get(file = here::here("conf", "conf.yaml"))$google$gsheet_url
 ```
 
 ```{r scrape_projections}
@@ -191,7 +194,7 @@ projections <-
             sd_ecr = mean(sd_ecr) %>% round(),
             risk = mean(risk) %>% round(),
             adp = mean(adp) %>% round(),
-            aav = mean(aav) %>% round()) %>% 
+            aav = max(1, mean(aav) %>% round())) %>% 
   left_join(predicted_yards_per_game, by = "id") %>%
   rename(points_adjustment = additional_points) %>% 
   group_by(position) %>% 
@@ -232,4 +235,9 @@ write_csv(projections,
 
 write_csv(projections, 
           here::here(latest, "projections-latest.csv"))
+```
+
+```{r}
+projections %>% 
+  googlesheets4::write_sheet(google_sheet_url,sheet = "projections")
 ```

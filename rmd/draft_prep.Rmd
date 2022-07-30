@@ -13,13 +13,13 @@ source(paste(getwd(), "_libraries.R", sep = "/"))
 ```
 
 ```{r constants}
-#TODO identify early easy opponent defenses
-#TODO identify sleepers/penny stocks
-#TODO any other uses of here::here("in")
+# TODO identify early easy opponent defenses
+# TODO identify sleepers/penny stocks
 
-# Next year
-#add way to export best/replacement values by position
-#any takeaways from prior year's week-to-week points deviation/variance?
+# TODO retrieve average winning score last year
+# TODO retrieve replacement values from last year
+
+# TODO export best/replacement values by position, last year actual and this year projected
 
 season <- 2022
 regular_season_games <- 17
@@ -164,7 +164,7 @@ if (file.exists(projections_table_file)) {
     add_ecr() %>% 
     add_risk() %>%
     add_adp() %>% 
-    add_aav() %>% 
+    add_aav_custom() %>% 
     add_player_info()
   
   write_rds(projections_table, 

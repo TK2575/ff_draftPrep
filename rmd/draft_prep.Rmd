@@ -16,7 +16,6 @@ source(paste(getwd(), "_libraries.R", sep = "/"))
 # TODO identify early easy opponent defenses
 # TODO identify sleepers/penny stocks
 
-# TODO retrieve average winning score last year
 # TODO retrieve replacement values from last year
 
 # TODO export best/replacement values by position, last year actual and this year projected
@@ -24,7 +23,7 @@ source(paste(getwd(), "_libraries.R", sep = "/"))
 season <- 2022
 regular_season_games <- 17
 budget <- 200
-target_points_week <- 130 #average winning score in 2019
+target_points_week <- 131.7 #average winning score in 2021
 dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed replacement values from 2019)
 
 out <- here::here("out")

@@ -13,24 +13,22 @@ source(paste(getwd(), "_libraries.R", sep = "/"))
 ```
 
 ```{r constants}
-# TODO identify early easy opponent defenses
-# TODO identify sleepers/penny stocks
-
-# TODO retrieve replacement values from last year
-
-# TODO export best/replacement values by position, last year actual and this year projected
+# TODO replace manual capture of last season's best/replacement values with api query
+# TODO enhance predraft ranking scrape to not require selenium (ffanalytics::yahoo_draft())
 
 season <- 2022
 regular_season_games <- 17
 budget <- 200
-target_points_week <- 131.7 #average winning score in 2021
-dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed replacement values from 2019)
+target_points_week <- 131.7 #average winning score in 2021, queried via tk_fantasy_sports repo
+dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed replacement values from 2019 (~101.98))
 
 out <- here::here("out")
 latest <- here::here(out, "latest")
+last_year_replacement_diff_file <- here::here("in", "2021_replacement_diff.csv")
 
-google_sheet_url <- 
-  config::get(file = here::here("conf", "conf.yaml"))$google$gsheet_url
+google_conf <- config::get(file = here::here("conf", "conf.yaml"))$google
+google_sheet_url <- google_conf$gsheet_url
+google_sheet_user <- google_conf$gsheet_user
 ```
 
 ```{r scrape_projections}
@@ -204,13 +202,13 @@ projections <-
     points = if_else(
       is.na(points_adjustment), points,
       points + points_adjustment),
-    pos_rank = rank(-points, ties.method="min")) %>% 
+    pos_rank = rank(-points, ties.method="first")) %>% 
   ungroup() %>% 
-  mutate(rank = rank(-points, ties.method="min"),
+  mutate(rank = rank(-points, ties.method="first"),
          points_per_game = (points / regular_season_games) %>% round(1),
          flex = if_else(position %in% c('RB','WR','TE'), TRUE, FALSE)) %>% 
   group_by(flex) %>% 
-  mutate(flex_rank = rank(-points, ties.method="min")) %>% 
+  mutate(flex_rank = rank(-points, ties.method="first")) %>% 
   ungroup() %>% 
   mutate(flex_rank = ifelse(flex, flex_rank, NA)) %>% 
   vorp_auction(target_points_week = target_points_week,
@@ -229,6 +227,16 @@ projections <-
             by = c("full_name" = "player", "position" = "position", "team" = "team")) %>% 
   select(-full_name)
 
+flex_rank_adj <- 
+  projections %>% 
+  filter((position %in% c('RB','WR') & pos_rank > 28) | (position == 'TE' & pos_rank > 14)) %>% 
+  mutate(flex_rank_adj = rank(flex_rank, ties.method = "first")) %>% 
+  select(id, flex_rank_adj)
+
+projections <- 
+  projections %>% 
+  left_join(flex_rank_adj, by = "id")
+
 write_csv(projections, 
           here::here(out, paste0("projections-", Sys.Date(), ".csv")))
 
@@ -237,6 +245,68 @@ write_csv(projections,
 ```
 
 ```{r}
+replacement_projected <-
+  (projections %>%
+     filter(position == 'QB' & pos_rank == 15)) %>%
+  bind_rows((projections %>%
+               filter(position == 'RB' & pos_rank == 29))) %>%
+  bind_rows((projections %>%
+               filter(position == 'WR' & pos_rank == 29))) %>%
+  bind_rows((projections %>%
+               filter(position == 'TE' & pos_rank == 15))) %>%
+  bind_rows((projections %>%
+               filter(position == 'K' & pos_rank == 15))) %>%
+  bind_rows((projections %>%
+               filter(position == 'DST' & pos_rank == 15))) %>%
+  bind_rows((
+    projections %>%
+      filter(flex_rank_adj == 15) %>%
+      select(-pos_rank) %>%
+      rename(pos_rank = flex_rank_adj) %>%
+      mutate(position = "FLX")
+  )) %>%
+  select(position, points) %>%
+  rename(replacement_projected = points)
+
+best_projected <-
+  projections %>%
+  filter(pos_rank == 1) %>%
+  select(position, points) %>%
+  bind_rows((
+    projections %>%
+      filter(!is.na(flex_rank) &
+               ((pos_rank > 1 &
+                   !(position %in% c("WR", "RB"))) |
+                  (pos_rank > 2 & position %in% c("WR", "RB"))
+               )) %>%
+      arrange(flex_rank) %>%
+      head(1) %>%
+      mutate(position = "FLX") %>%
+      select(position, points)
+  )) %>%
+  rename(best_projected = points)
+
+replacement_diff <- 
+  readr::read_csv(last_year_replacement_diff_file,
+                  show_col_types = FALSE) %>% 
+  full_join(best_projected, by = "position") %>% 
+  full_join(replacement_projected, by = "position")
+
+write_csv(replacement_diff, 
+          here::here(out, paste0("replacement-diff-", Sys.Date(), ".csv")))
+
+write_csv(replacement_diff, 
+          here::here(latest, "replacement-diff-latest.csv"))
+```
+
+```{r}
+gs4_auth(google_sheet_user)
+
 projections %>% 
   googlesheets4::write_sheet(google_sheet_url,sheet = "projections")
+
+replacement_diff %>% 
+  googlesheets4::write_sheet(google_sheet_url,sheet = "replacement diff")
 ```
+
+

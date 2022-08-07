@@ -25,8 +25,6 @@ budget <- 200
 # average winning score in 2021, queried via tk_fantasy_sports repo
 target_points_week <- 131.7 
 
-# TODO derive this
-# 2021 was 7.46 = 209 (budget) / (130 - manually computed replacement values from 2019 (~101.98))
 dollar_vorp_target_override <- NULL
 
 out <- here::here("out")
@@ -96,7 +94,8 @@ projections <-
   mutate(flex_rank = ifelse(flex, flex_rank, NA)) %>% 
   vorp_auction(target_points_week = target_points_week,
                budget = budget,
-               dollar_vorp_target_override = dollar_vorp_target_override) %>% 
+               dollar_vorp_target_override = dollar_vorp_target_override,
+               latest_directory = latest) %>% 
   select(id:sd_pts, 
          points_per_game, 
          tier, 
@@ -128,58 +127,29 @@ write_csv(projections,
 ```
 
 ```{r replacement_diff}
-replacement_projected <-
-  (projections %>%
-     filter(position == 'QB' & pos_rank == 15)) %>%
-  bind_rows((projections %>%
-               filter(position == 'RB' & pos_rank == 29))) %>%
-  bind_rows((projections %>%
-               filter(position == 'WR' & pos_rank == 29))) %>%
-  bind_rows((projections %>%
-               filter(position == 'TE' & pos_rank == 15))) %>%
-  bind_rows((projections %>%
-               filter(position == 'K' & pos_rank == 15))) %>%
-  bind_rows((projections %>%
-               filter(position == 'DST' & pos_rank == 15))) %>%
-  bind_rows((
-    projections %>%
-      filter(flex_rank_adj == 15) %>%
-      select(-pos_rank) %>%
-      rename(pos_rank = flex_rank_adj) %>%
-      mutate(position = "FLX")
-  )) %>%
-  select(position, points) %>%
-  rename(replacement_projected = points)
+vorp_details <-
+  read_rds(file.path(latest,"vorp_details.Rds"))
 
-best_projected <-
-  projections %>%
-  filter(pos_rank == 1) %>%
-  select(position, points) %>%
-  bind_rows((
-    projections %>%
-      filter(!is.na(flex_rank) &
-               ((pos_rank > 1 &
-                   !(position %in% c("WR", "RB"))) |
-                  (pos_rank > 2 & position %in% c("WR", "RB"))
-               )) %>%
-      arrange(flex_rank) %>%
-      head(1) %>%
-      mutate(position = "FLX") %>%
-      select(position, points)
-  )) %>%
-  rename(best_projected = points)
+vorp_attributes <-
+  vorp_details[-1] %>% 
+  purrr::map_df(~as.data.frame(.x), .id="attribute") %>% 
+  as_tibble() %>% 
+  rename(value = .x)
 
-replacement_diff <- 
+replacement_diff <-
   readr::read_csv(last_year_replacement_diff_file,
                   show_col_types = FALSE) %>% 
-  full_join(best_projected, by = "position") %>% 
-  full_join(replacement_projected, by = "position")
+  mutate_if(is.numeric, ~ (./17) %>% round(2)) %>% 
+  full_join(vorp_details$roster_values, by = "pos")
 
 write_csv(replacement_diff, 
           file.path(out, paste0("replacement-diff-", Sys.Date(), ".csv")))
 
 write_csv(replacement_diff, 
           file.path(latest, "replacement-diff-latest.csv"))
+
+write_csv(vorp_attributes,
+          file.path(latest, "vorp-attributes-latest.csv"))
 ```
 
 ```{r write_to_gsheet}
@@ -190,4 +160,7 @@ projections %>%
 
 replacement_diff %>% 
   googlesheets4::write_sheet(google_sheet_url,sheet = "replacement diff")
+
+vorp_attributes %>% 
+  googlesheets4::write_sheet(google_sheet_url,sheet = "vorp attributes")
 ```

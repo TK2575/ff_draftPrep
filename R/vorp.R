@@ -1,7 +1,8 @@
 vorp_auction <- function(projections, 
                          target_points_week = 120,
                          budget = 200,
-                         dollar_vorp_target_override = NULL) {
+                         dollar_vorp_target_override = NULL,
+                         latest_directory = NULL) {
   qb <-
     projections %>% 
     filter(position == 'QB', !is.na(points)) %>% 
@@ -89,14 +90,33 @@ vorp_auction <- function(projections,
   target_team_vorp <- 
     target_points_week - replacement_team_points_weekly
   
-  if (is.null(dollar_vorp_target_override) || !is.numeric(dollar_vorp_target_override)) {
-    dollar_per_vorp_target <- 
-      (budget / target_team_vorp) %>% 
-      round()  
-  } else {
-    dollar_per_vorp_target <- dollar_vorp_target_override
+  dollar_per_vorp_target <- 
+    (budget / target_team_vorp) %>% 
+    round(2)
+  
+  if (!is.null(latest_directory)) {
+    vorp_details <- 
+      list(roster_values,
+           replacement_team_points_weekly,
+           best_team_points_weekly,
+           target_team_vorp,
+           dollar_per_vorp_target,
+           dollar_vorp_target_override)
+    
+    names(vorp_details) <- c("roster_values",
+                             "replacement_team_points_weekly",
+                             "best_team_points_weekly",
+                             "target_team_vorp",
+                             "dollar_per_vorp_target",
+                             "dollar_vorp_target_override")
+    
+    write_rds(vorp_details,
+              file.path(latest, "vorp_details.Rds"))
   }
   
+  if (!is.null(dollar_vorp_target_override) & is.numeric(dollar_vorp_target_override)) {
+    dollar_per_vorp_target <- dollar_vorp_target_override
+  }
   
   replacements <-
     roster_values %>% 

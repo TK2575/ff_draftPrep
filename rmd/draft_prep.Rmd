@@ -19,8 +19,13 @@ source(paste(getwd(), "_libraries.R", sep = "/"))
 season <- 2022
 regular_season_games <- 17
 budget <- 200
-target_points_week <- 131.7 #average winning score in 2021, queried via tk_fantasy_sports repo
-dollar_vorp_target_override <- 7.46 #from budget / (130 - manually computed replacement values from 2019 (~101.98))
+
+# average winning score in 2021, queried via tk_fantasy_sports repo
+target_points_week <- 131.7 
+
+# TODO derive this
+# from budget / (130 - manually computed replacement values from 2019 (~101.98))
+dollar_vorp_target_override <- 7.46 
 
 out <- here::here("out")
 latest <- here::here(out, "latest")
@@ -75,6 +80,7 @@ if (file.exists(yahoo_av_file)) {
              team == "TB" ~ "TBB",
              team == "SF" ~ "SFO",
              team == "NE" ~ "NEP",
+             team == "JAX" ~ "JAC",
              TRUE ~ team),
            player = gsub(" Jr.", "", player),
            player = gsub(" III", "", player),

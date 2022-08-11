@@ -30,16 +30,27 @@ bid_pricing <- function(projections, auction_values, latest_directory = NULL) {
     summarize(bid_adjustment = -median(bid_diff, na.rm = TRUE)) %>% 
     ungroup()
   
-  if (!is.null(latest_directory)) {
-    write_csv(bid_adjustments,
-              file.path(latest, "bid_adjustments.csv"))
-  }
-  
-  df %>% 
+  results <- 
+    df %>% 
+    filter(!position %in% c("DST","K")) %>% 
     left_join(bid_adjustments, by = "position") %>% 
     mutate(max_bid = pmax(max_bid + bid_adjustment,1),
            dollar_vorp = if_else(vorp == 0, 0, (max_bid / vorp)) %>% round(2),
-           bid_diff = max_bid - max_yahoo_value) %>% 
+           bid_diff = max_bid - max_yahoo_value)
+  
+  if (!is.null(latest_directory)) {
+    results %>% 
+      filter(vorp >= 0) %>% 
+      group_by(position) %>% 
+      summarize(dollar_vorp_mean = mean(dollar_vorp, na.rm = TRUE),
+                dollar_vorp_median = median(dollar_vorp, na.rm = TRUE),
+                dollar_vorp_sd = sd(dollar_vorp, na.rm = TRUE)) %>% 
+      left_join(bid_adjustments, by = "position") %>% 
+      relocate(position, bid_adjustment) %>% 
+      write_csv(file.path(latest, "bid_adjustments.csv"))
+  }
+  
+  results %>% 
     bind_rows(dst_k) %>% 
     select(-(league_value:avg_salary), -bid_adjustment)
 }

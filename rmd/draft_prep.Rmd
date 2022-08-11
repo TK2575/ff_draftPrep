@@ -97,7 +97,7 @@ projections <-
   vorp_auction(target_points_week = target_points_week,
                budget = budget,
                dollar_vorp_target_override = dollar_vorp_target_override,
-               latest_directory = latest) %>% 
+               latest_directory = latest) %>%  
   bid_pricing(yahoo_av, latest) %>% 
   add_flex_rank_adj()
 

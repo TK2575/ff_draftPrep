@@ -35,15 +35,14 @@ bid_pricing <- function(projections, auction_values, latest_directory = NULL) {
     filter(!position %in% c("DST","K")) %>% 
     left_join(bid_adjustments, by = "position") %>% 
     mutate(max_bid = pmax(max_bid + bid_adjustment,1),
-           dollar_vorp = if_else(vorp == 0, 0, (max_bid / vorp)) %>% round(2),
+           dollar_vorp = if_else(vorp == 0, 0, (pmax(max_bid,max_yahoo_value, na.rm=TRUE) / vorp)) %>% round(2),
            bid_diff = max_bid - max_yahoo_value)
   
   if (!is.null(latest_directory)) {
     results %>% 
       filter(vorp >= 0) %>% 
       group_by(position) %>% 
-      summarize(dollar_vorp_mean = mean(dollar_vorp, na.rm = TRUE),
-                dollar_vorp_median = median(dollar_vorp, na.rm = TRUE),
+      summarize(dollar_vorp_median = median(dollar_vorp, na.rm = TRUE),
                 dollar_vorp_sd = sd(dollar_vorp, na.rm = TRUE)) %>% 
       left_join(bid_adjustments, by = "position") %>% 
       relocate(position, bid_adjustment) %>% 

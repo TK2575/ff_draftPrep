@@ -1,7 +1,6 @@
 scrape_predraft_ranking_pages <- function() {
   conf <- config::get(file = here::here("conf", "conf.yaml"))
   
-  league_id <- here::here()
   url_base <- paste0("https://football.fantasysports.yahoo.com/f1/", conf$yahoo$league_id, "/")
   
   open_session <- function() {

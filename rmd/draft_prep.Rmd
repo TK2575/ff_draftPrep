@@ -1,7 +1,7 @@
 ---
 title: "Fantasy Football Draft Prep"
 author: "Tom Kain"
-date: "8/10/2021"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -15,7 +15,10 @@ source(paste(getwd(), "_libraries.R", sep = "/"))
 ```{r constants}
 # force re-pull of all data even if captured today
 force <- FALSE
+
 # TODO replace manual capture of last season's best/replacement values with api query
+last_year_replacement_diff_file <- here::here("in", "2021_replacement_diff.csv")
+
 # TODO enhance predraft ranking scrape to not require selenium (ffanalytics::yahoo_draft())
 
 season <- 2022
@@ -29,7 +32,6 @@ dollar_vorp_target_override <- NULL
 
 out <- here::here("out")
 latest <- here::here(out, "latest")
-last_year_replacement_diff_file <- here::here("in", "2021_replacement_diff.csv")
 
 google_conf <- config::get(file = here::here("conf", "conf.yaml"))$google
 google_sheet_url <- google_conf$gsheet_url
@@ -96,28 +98,8 @@ projections <-
                budget = budget,
                dollar_vorp_target_override = dollar_vorp_target_override,
                latest_directory = latest) %>% 
-  select(id:sd_pts, 
-         points_per_game, 
-         tier, 
-         pos_tier, 
-         pos_ecr:rank, 
-         flex_rank:max_bid) %>% 
-  mutate(full_name = if_else(position == 'DST',
-                             first_name,
-                             paste0(first_name, " ", last_name))) %>% 
-  left_join(yahoo_av, 
-            by = c("full_name" = "player", "position" = "position", "team" = "team")) %>% 
-  select(-full_name)
-
-flex_rank_adj <- 
-  projections %>% 
-  filter((position %in% c('RB','WR') & pos_rank > 28) | (position == 'TE' & pos_rank > 14)) %>% 
-  mutate(flex_rank_adj = rank(flex_rank, ties.method = "first")) %>% 
-  select(id, flex_rank_adj)
-
-projections <- 
-  projections %>% 
-  left_join(flex_rank_adj, by = "id")
+  bid_pricing(yahoo_av, latest) %>% 
+  add_flex_rank_adj()
 
 write_csv(projections, 
           file.path(out, paste0("projections-", Sys.Date(), ".csv")))
@@ -163,4 +145,8 @@ replacement_diff %>%
 
 vorp_attributes %>% 
   googlesheets4::write_sheet(google_sheet_url,sheet = "vorp attributes")
+
+file.path(latest, "bid_adjustments.csv") %>% 
+  read_csv(show_col_types = FALSE) %>% 
+  googlesheets4::write_sheet(google_sheet_url,sheet = "bid adjustments")
 ```

@@ -125,57 +125,36 @@ vorp_auction <- function(projections,
   
   qb <-
     qb %>% 
-    mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['QB'],
-           dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
-           max_bid = ceiling(vorp * dollar_per_vorp_target),
-           max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(qb$points,9)) 
+    mutate(vorp = points_per_game - replacements['QB'],
+           vorf = vorp)
   
   rb <-
     rb %>%
-    mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['RB1'],
-           dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
-           max_bid = ceiling(vorp * dollar_per_vorp_target),
-           max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(rb$points,20))
+    mutate(vorp = points_per_game - replacements['RB1'],
+           vorf = points_per_game - replacements['FLEX'])
   
   wr <-
     wr %>% 
-    mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['WR1'],
-           dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
-           max_bid = ceiling(vorp * dollar_per_vorp_target),
-           max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(wr$points,20))
+    mutate(vorp = points_per_game - replacements['WR1'],
+           vorf = points_per_game - replacements['FLEX'])
   
   te <-
     te %>% 
-    mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['TE'],
-           dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
-           max_bid = ceiling(vorp * dollar_per_vorp_target),
-           max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(te$points,8))
+    mutate(vorp = points_per_game - replacements['TE'],
+           vorf = points_per_game - replacements['FLEX'])
   
   dst <-
     dst %>% 
-    mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = points_per_game - replacements['DST'],
-           dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
-           max_bid = ceiling(vorp * dollar_per_vorp_target),
-           max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(dst$points,3))
+    mutate(vorp = points_per_game - replacements['DST'],
+           vorf = vorp)
   
   k <-
     k %>% 
-    mutate(points_per_dollar = (points_per_game / aav) %>% round(1),
-           vorp = (points_per_game - replacements['K']) %>% round(1),
-           dollar_vorp = if_else(vorp == 0, 0, (aav / vorp) %>% round(1)),
-           max_bid = ceiling(vorp * dollar_per_vorp_target),
-           max_bid = if_else(max_bid<=1,1,max_bid)) %>% 
-    add_column(pos_tier = tiers(k$points,6))
+    mutate(vorp = (points_per_game - replacements['K']) %>% round(1),
+           vorf = vorp)
   
-  bind_rows(qb, rb, wr, te, dst, k)
+  bind_rows(qb, rb, wr, te, dst, k) %>% 
+    mutate(max_bid = pmax(1, ceiling(vorf * dollar_per_vorp_target)),
+           dollar_vorp = if_else(vorp == 0, 0, (max_bid / vorp) %>% round(1)),
+           dollar_vorf = if_else(vorf == 0, 0, (max_bid / vorf) %>% round(1)))
 }

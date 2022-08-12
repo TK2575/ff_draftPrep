@@ -28,7 +28,7 @@ budget <- 200
 # average winning score in 2021, queried via tk_fantasy_sports repo
 target_points_week <- 131.7 
 
-dollar_vorp_target_override <- NULL
+dollar_vorp_target_override <- 9.315
 
 out <- here::here("out")
 latest <- here::here(out, "latest")
@@ -94,12 +94,13 @@ projections <-
   mutate(flex_rank = rank(-points, ties.method="first")) %>% 
   ungroup() %>% 
   mutate(flex_rank = ifelse(flex, flex_rank, NA)) %>% 
+  add_flex_rank_adj() %>% 
   vorp_auction(target_points_week = target_points_week,
                budget = budget,
                dollar_vorp_target_override = dollar_vorp_target_override,
-               latest_directory = latest) %>%  
-  bid_pricing(yahoo_av, latest) %>% 
-  add_flex_rank_adj()
+               latest_directory = latest) %>% 
+  bid_pricing(yahoo_av, latest, dollar_vorp_target_override) %>% 
+  select(id, first_name, last_name, team, position, points, sd_pts, points_adjustment, points_per_game, risk, adp, aav, rank, pos_rank, flex_rank, flex_rank_adj, vorp, vorf, max_yahoo_value, max_bid, bid_diff, dollar_vorp, dollar_vorf)
 
 write_csv(projections, 
           file.path(out, paste0("projections-", Sys.Date(), ".csv")))

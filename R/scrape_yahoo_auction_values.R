@@ -22,8 +22,10 @@ scrape_yahoo_auction_values <- function(out_directory, latest_directory, force=F
                team == "JAX" ~ "JAC",
                TRUE ~ team),
              player = gsub(" Jr.", "", player),
-             player = gsub(" III", "", player),
-             player = gsub(" II", "", player))
+             # player = gsub(" III", "", player),
+             # player = gsub(" II", "", player),
+             player = gsub("Eli Mitchell", "Elijah Mitchell", player),
+             player = gsub("DJ Moore", "D.J. Moore", player))
     
     write_csv(yahoo_av, yahoo_av_file)
     write_csv(yahoo_av, 

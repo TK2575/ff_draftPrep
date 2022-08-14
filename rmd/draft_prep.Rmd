@@ -28,7 +28,7 @@ budget <- 200
 # average winning score in 2021, queried via tk_fantasy_sports repo
 target_points_week <- 131.7 
 
-dollar_vorp_target_override <- 9.315
+dollar_vorp_target_override <- 9.09
 
 out <- here::here("out")
 latest <- here::here(out, "latest")

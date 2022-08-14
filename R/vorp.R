@@ -1,5 +1,5 @@
 vorp_auction <- function(projections, 
-                         target_points_week = 120,
+                         target_points_week,
                          budget = 200,
                          dollar_vorp_target_override = NULL,
                          latest_directory = NULL) {
@@ -21,11 +21,6 @@ vorp_auction <- function(projections,
   te <- 
     projections %>% 
     filter(position == 'TE', !is.na(points)) %>% 
-    arrange(points_per_game %>% desc)
-  
-  flex <-
-    projections %>% 
-    filter(flex, !is.na(points)) %>% 
     arrange(points_per_game %>% desc)
   
   dst <-
@@ -57,11 +52,10 @@ vorp_auction <- function(projections,
   )
   
   flex_replacement <-
-    max(
-      rb$points_per_game %>% nth(31),
-      wr$points_per_game %>% nth(31),  
-      te$points_per_game %>% nth(16)
-    )
+    projections %>% 
+    filter(flex_rank_adj == 15) %>% 
+    select(points_per_game) %>% 
+    pull()
   
   replacement_values <- c(
     qb$points_per_game %>% nth(15),
